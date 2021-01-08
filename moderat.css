@@ -5,48 +5,27 @@ body{
     margin: 0;
 }
 
-#mainer{
-    z-index: -10;
-    position: fixed;
+#mainer1{
+    position: absolute;
     top: 0;
+}
+#mainer2{
+    position: absolute;
+    top: 100vh;
+}
+#mainer3{
+    position: absolute;
+    top: 200vh;
 }
 
 .lefthalf{
     width: 50vw;
-    min-height: 220vh;
+    min-height: 300vh;
     position: absolute;
     top: 0;
     left: 0;
     text-align: end;
-}
-
-.abouter{
-    position: relative;
-    top: 100vh;
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
-    text-transform: lowercase;
-}
-
-.rightbar{
-    width: 75px;
-    height: 100vh;
-    border-left: 1px white solid;
-    position: fixed;
-    right: 0;
-}
-.rytem{
-    border-bottom: 1px white solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 3px;
-}
-.rytemtxt{
-    transform: rotate(90deg);
+    background-color: rgb(120,120,120,0.5);
 }
 
 .textt{
@@ -63,22 +42,6 @@ body{
     font-size: 1.75rem;
 }
 
-.fadouter{
-    position: fixed;
-    right: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0);
-    width: 0px;
-    height: 0px;
-    transition: background-color 2s linear;
-}
-
-.goopaque{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
-}
-
 .fadiner{
     position: fixed;
     right: 0;
@@ -92,3 +55,4 @@ body{
 .gotransp{
     background-color: rgba(0, 0, 0, 0);
 }
+
