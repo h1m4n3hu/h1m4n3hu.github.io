@@ -13,19 +13,16 @@
 <div id="mainer1"></div>
 <div id="mainer2"></div>
 <div id="mainer3"></div>
+<div id="mainer4"></div>
 <div class="lefthalf">
     <div class="textt texttname">himanshu soni</div>
-    <div class="textt texttheadline">for the love of god and mondays</div>
+    <div class="textt texttheadline">for the love of mondays.</div>
 </div>
 
 <div class="fadiner"></div>
 
     <script>
-
-
-
-
-
+   
         var scene1=new THREE.Scene();
         var cam1=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
         cam1.position.set(0,5,20);
@@ -41,23 +38,18 @@
         var openEnded = true;
         var thetaStart = Math.PI * 0;
         var thetaLength = Math.PI * 2;
-        var torer1 = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret1=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
-        var torus1=new THREE.Mesh(torer1,toret1);
-        torus1.position.set(5,0,-3)
-        scene1.add(torus1);
-        
-        var radialSegments = 50;
-        var heightSegments = 30;
-        var openEnded = true;
-        var thetaStart = Math.PI * 0;
-        var thetaLength = Math.PI * 2;
-        var torer2 = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret2=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
-        var torus2=new THREE.Mesh(torer2,toret2);
-        torus2.rotation.z=Math.PI/4;
-        torus2.position.set(5,0,1)
-        scene1.add(torus2);
+        var torer1a = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret1a=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
+        var torus1a=new THREE.Mesh(torer1a,toret1a);
+        torus1a.position.set(5,2,-3)
+        scene1.add(torus1a);
+
+        var torer2a = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret2a=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
+        var torus2a=new THREE.Mesh(torer2a,toret2a);
+        torus2a.rotation.z=Math.PI/4;
+        torus2a.position.set(5,2,1)
+        scene1.add(torus2a);
 
         var light1=new THREE.AmbientLight(0xffffff,1,400);
         light1.position.set(10,10,10);
@@ -65,106 +57,126 @@
 
         render1=()=>{
             requestAnimationFrame(render1);
-            torus1.rotation.y+=0.005;
-            torus2.rotation.x+=0.005;
+            torus1a.rotation.y+=0.005;
+            torus2a.rotation.x+=0.005;
             renderer1.render(scene1,cam1);
         }
         render1();        
-        controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
-        
+        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
 
 
 
-
-
-        
         var scene2=new THREE.Scene();
         var cam2=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-        cam2.position.set(-5,0,10);
-        cam2.lookAt(0,0,0);
-        var renderer2=new THREE.WebGLRenderer({antialias:true});
+        cam2.position.set(4,0,2);
+        var renderer2=new THREE.WebGLRenderer({antialias:true,alpha:true});
         renderer2.setClearColor("rgb(150,150,150)");
+        renderer2.setPixelRatio(window.devicePixelRatio)
         renderer2.setSize(window.innerWidth,window.innerHeight);
         document.getElementById("mainer2").appendChild(renderer2.domElement);
-        
-        var baller2=new THREE.SphereGeometry(0.1,1);
-        var ballet2=new THREE.MeshBasicMaterial({wireframe:true,color:0xffff00})
-        var ball2=new THREE.Mesh(baller2,ballet2);
-        //scene.add(ball)
-        
-        var ll2=[]
-        var rhombi2=(posx,posy,posz,rot)=>{
-            var rhomber2=new THREE.CircleGeometry(4,4);
-            var rhombet2=new THREE.EdgesGeometry(rhomber2);
-            var rhombus2=new THREE.LineSegments(rhombet2,new THREE.LineBasicMaterial({color:0x4f4f4f}));
-            rhombus2.position.set(posx,posy,posz);
-            rhombus2.rotation.z=(Math.PI/18)*rot;
-            scene2.add(rhombus2);
-            return rhombus2
-        }
+        var loader2=new THREE.TextureLoader();
 
-        for(var i=-4.5;i<5;i+=0.25){ll2.push(rhombi2(0,0,i,i));}
-        
-        var rotat=(item)=>{item.rotation.z+=Math.PI/360;}
+        var torer1b = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret1b=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
+        var torus1b=new THREE.Mesh(torer1b,toret1b);
+        torus1b.rotation.z=Math.PI/10;
+        torus1b.position.set(5,0,-3)
+        scene2.add(torus1b);
+
+        var torer2b = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret2b=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
+        var torus2b=new THREE.Mesh(torer2b,toret2b);
+        torus2b.rotation.z=Math.PI/4;
+        torus2b.position.set(5,0,1)
+        //scene2.add(torus2b);
+
+        var light2=new THREE.AmbientLight(0xffffff,1,400);
+        light2.position.set(10,10,10);
+        scene2.add(light2);
+
         render2=()=>{
-            var time=Date.now()*0.005;
-            cam2.position.z=Math.sin(time*0.07)*10;
-            cam2.position.x=Math.cos(time*0.07)*10;
-            cam2.position.y=Math.cos(time*0.07)*10;
-            
             requestAnimationFrame(render2);
-            cam2.lookAt(0,0,0);
-            ll2.forEach(rotat);
+            torus1b.rotation.y+=0.005;
+            torus2b.rotation.x+=0.005;
             renderer2.render(scene2,cam2);
         }
-        render2();
-        
-        
-        
+        render2();        
+        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
+
 
         var scene3=new THREE.Scene();
-        var cam3=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-        cam3.position.set(0,3,13);
-        cam3.lookAt(0,0,0);
-        var renderer3=new THREE.WebGLRenderer({antialias:true});
+        var cam3=new THREE.PerspectiveCamera(70,window.innerWidth/window.innerHeight,0.1,1000);
+        cam3.position.set(0,0,15);
+        var renderer3=new THREE.WebGLRenderer({antialias:true,alpha:true});
         renderer3.setClearColor("rgb(150,150,150)");
+        renderer3.setPixelRatio(window.devicePixelRatio)
         renderer3.setSize(window.innerWidth,window.innerHeight);
         document.getElementById("mainer3").appendChild(renderer3.domElement);
-        
-        var baller3=new THREE.SphereGeometry(0.1,1);
-        var ballet3=new THREE.MeshBasicMaterial({wireframe:true,color:0xffff00})
-        var ball3=new THREE.Mesh(baller3,ballet3);
-        //scene.add(ball)
-        
-        var ll3=[]
-        var rhombi3=(rad)=>{
-            var rhomber3=new THREE.CircleGeometry(rad,100);
-            var rhombet3=new THREE.EdgesGeometry(rhomber3);
-            var rhombus3=new THREE.LineSegments(rhombet3,new THREE.LineBasicMaterial({color:0x6f6f6f}));
-            rhombus3.position.set(0,0,0);
-            rhombus3.rotation.x=Math.PI/2
-            scene3.add(rhombus3);
-            return rhombus3
-        }
+        var loader3=new THREE.TextureLoader();
 
-        for(var i=0;i<6;i+=0.25){ll3.push(rhombi3(i));}
-        
-        var viber3=(item,val)=>{
-            var time=Date.now()*0.0005;
-            item.position.y=Math.sin((time+val*0.07))*5;
-        }
+        var torer1c = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret1c=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
+        var torus1c=new THREE.Mesh(torer1c,toret1c);
+        torus1c.position.set(5,0,-3)
+        //scene3.add(torus1c);
+
+        var torer2c = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret2c=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
+        var torus2c=new THREE.Mesh(torer2c,toret2c);
+        torus2c.rotation.z=Math.PI/2;
+        torus2c.position.set(5,0,1)
+        scene3.add(torus2c);
+
+        var light3=new THREE.AmbientLight(0xffffff,1,400);
+        light3.position.set(10,10,10);
+        scene3.add(light3);
+
         render3=()=>{
-            var time3=Date.now()*0.005;
             requestAnimationFrame(render3);
-            cam3.lookAt(0,0,0);
-            ll3.forEach(viber3);
+            //torus1c.rotation.y+=0.005;
+            torus2c.rotation.y+=0.005;
             renderer3.render(scene3,cam3);
         }
-        render3();
-        
-        
+        render3();        
+        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
 
-        
+
+        var scene4=new THREE.Scene();
+        var cam4=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+        cam4.position.set(-3,1,10);
+        var renderer4=new THREE.WebGLRenderer({antialias:true,alpha:true});
+        renderer4.setClearColor("rgb(150,150,150)");
+        renderer4.setPixelRatio(window.devicePixelRatio)
+        renderer4.setSize(window.innerWidth,window.innerHeight);
+        document.getElementById("mainer4").appendChild(renderer4.domElement);
+        var loader4=new THREE.TextureLoader();
+
+        var torer1d = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret1d=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
+        var torus1d=new THREE.Mesh(torer1d,toret1d);
+        torus1d.position.set(5,-1,-3)
+        scene4.add(torus1d);
+
+        var torer2d = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret2d=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
+        var torus2d=new THREE.Mesh(torer2d,toret2d);
+        torus2d.position.set(6,2.5,1)
+        scene4.add(torus2d);
+
+        var light4=new THREE.AmbientLight(0xffffff,1,400);
+        light4.position.set(10,10,10);
+        scene4.add(light4);
+
+        render4=()=>{
+            requestAnimationFrame(render4);
+            torus1d.rotation.y+=0.005;
+            torus2d.rotation.y+=0.005;
+            renderer4.render(scene4,cam4);
+        }
+        render4();        
+        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
+
+
         setTimeout(function(){$('.fadiner').addClass('gotransp');}, 1);
         setTimeout(function(){$('.fadiner').css({"width":"0","heigth":"0"});}, 3000);
         
