@@ -121,7 +121,7 @@ body{
     height: 200px;
     margin: 25px;
     background-color: #fff;
-    background-image: url("https://data.whicdn.com/images/307606462/original.jpg");
+    /*background-image: url("https://data.whicdn.com/images/307606462/original.jpg");*/
     /*background-size: cover;*/
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0);
