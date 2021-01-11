@@ -22,10 +22,14 @@ body{
     position: absolute;
     top: 300vh;
 }
+#mainer5{
+    position: absolute;
+    top: 400vh;
+}
 
 .lefthalf{
     width: 50vw;
-    min-height: 400vh;
+    min-height: 500vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -47,12 +51,87 @@ body{
     font-size: 2rem;
 }
 
-.doing{
-    font-family: 'Anton', sans-serif;
-    font-size: 5rem;
+
+
+/*links*/
+
+.contacter{
     position: relative;
     top: 100vh;
+    right:50%;
 }
+
+.sharelink{
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+}
+
+.gridded{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.7rem;
+    position: absolute;
+    /*background-color: #fff;*/
+    top: 150vh;
+    right: 0;
+    display: grid;
+    height: 75px;
+    grid-template-columns: 350px 200px 350px;
+}
+
+.textup{
+    display:inline-block;
+    overflow:hidden;
+}
+.textdn{
+    display:inline-block;
+    overflow:hidden;
+}
+.jetterup,.jetterdn{
+    position: relative;
+    transition: 0.4s;
+}
+.jetterup{top: -210px;}
+.jetterdn{top: -20px;}
+
+
+
+
+/*projectss*/
+
+.headhead{
+    position: relative;
+    top: 200vh;
+    font-family: 'Anton', serif;
+    font-size: 3rem;
+    margin: 20px;
+}
+
+.artdiv{
+    position: relative;
+    top: 200vh;
+    height: 250px;
+    width: 1250px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.arrt{
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    background-color: #fff;
+    background-image: url("https://data.whicdn.com/images/307606462/original.jpg");
+    /*background-size: cover;*/
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0);
+    transition: transform 0.2s;
+}
+.arrt:hover{
+    transform: rotate(1deg);
+}
+
+
 
 
 

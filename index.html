@@ -6,7 +6,7 @@
         <script src="OrbitControls.js"></script>
         <link rel="stylesheet" href="moderat.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <title>h1m4n3hu and the web</title>
+        <title>h1m4n3hu | portfolio</title>
     </head>
 <body>
 
@@ -14,15 +14,62 @@
 <div id="mainer2"></div>
 <div id="mainer3"></div>
 <div id="mainer4"></div>
+<div id="mainer5"></div>
 <div class="lefthalf">
     <div class="textt texttname">himanshu soni</div>
     <div class="textt texttheadline">for the love of mondays.</div>
+    <div class="contacter">
+        <a class="sharelink linkedin">LINKEDIN</a><br>
+        <a class="sharelink medium">MEDIUM</a><br>
+        <a class="sharelink instagram">INSTAGRAM</a><br>
+        <a class="sharelink behance">BEHANCE</a><br>
+        <a class="sharelink web">WEB</a><br>
+        <a class="sharelink github">GITHUB</a><br>
+    </div>
+</div>
+<div class="gridded">
+    <div class="textup leftup" style="text-align: right; padding-right: 6px;">
+        <span class="jetterup">linkedin.com/in/<br>@<br>behance.net/<br>github.com/</span>
+    </div>
+    <span class="allet">h1m4n3hu</span>
+    <div class="textdn rightdn">
+        <br><span class="jetterdn">.medium.com<br>.github.io</span>
+    </div>
+</div>
+<div class="headhead projhead">works</div>
+<div class="artdiv">
+    <div class="arrt arrt1">asdfasdf</div>
+    <div class="arrt arrt2"></div>
+    <div class="arrt arrt3"></div>
+    <div class="arrt arrt4"></div>
+</div>
+<br>
+<div class="headhead projhead">arts</div>
+<div class="artdiv">
+    <div class="arrt arrt1"></div>
+    <div class="arrt arrt2"></div>
+</div>
+<br>
+<div class="headhead projhead">publishes</div>
+<div class="artdiv">
+    <div class="arrt arrt1"></div>
+    <div class="arrt arrt2"></div>
+    <div class="arrt arrt3"></div>
+</div>
+<br>
+<div class="headhead projhead">designs</div>
+<div class="artdiv">
+    <div class="arrt arrt1"></div>
+    <div class="arrt arrt2"></div>
+    <div class="arrt arrt3"></div>
+    <div class="arrt arrt4"></div>
+    <div class="arrt arrt5"></div>
 </div>
 
-<div class="fadiner"></div>
+<!-- <div class="fadiner"></div> -->
 
     <script>
-   
+    {
         var scene1=new THREE.Scene();
         var cam1=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
         cam1.position.set(0,5,20);
@@ -175,6 +222,78 @@
         }
         render4();        
         //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
+
+
+        var scene5=new THREE.Scene();
+        var cam5=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+        cam5.position.set(2,0,20);
+        var renderer5=new THREE.WebGLRenderer({antialias:true,alpha:true});
+        renderer5.setClearColor("rgb(150,150,150)");
+        renderer5.setPixelRatio(window.devicePixelRatio)
+        renderer5.setSize(window.innerWidth,window.innerHeight);
+        document.getElementById("mainer5").appendChild(renderer5.domElement);
+        var loader5=new THREE.TextureLoader();
+
+        var torer1e = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret1e=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
+        var torus1e=new THREE.Mesh(torer1e,toret1e);
+        torus1e.rotation.z=Math.PI/2;
+        torus1e.position.set(4,0,0)
+        scene5.add(torus1e);
+
+        var torer2e = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+        var toret2e=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
+        var torus2e=new THREE.Mesh(torer2e,toret2e);
+        torus2e.rotation.z=Math.PI/2;
+        torus2e.position.set(0,0,0)
+        scene5.add(torus2e);
+
+        var light5=new THREE.AmbientLight(0xffffff,1,400);
+        light5.position.set(10,10,10);
+        scene5.add(light5);
+
+        render5=()=>{
+            requestAnimationFrame(render5);
+            torus1e.rotation.x+=0.005;
+            torus2e.rotation.x-=0.005;
+            renderer5.render(scene5,cam5);
+        }
+        render5();
+    }
+
+
+
+
+        $(function() {
+            $('.linkedin').hover(function() {$('.jetterup').css('top','0');;},
+                                 function() {$('.jetterup').css('top','-210px');
+            });
+        });
+        $(function() {
+            $('.instagram').hover(function() {$('.jetterup').css('top','-60px');;},
+                                 function() {$('.jetterup').css('top','-210px');
+            });
+        });
+        $(function() {
+            $('.behance').hover(function() {$('.jetterup').css('top','-115px');;},
+                                function() {$('.jetterup').css('top','-210px');
+            });
+        });
+        $(function() {
+            $('.github').hover(function() {$('.jetterup').css('top','-174px');;},
+                                function() {$('.jetterup').css('top','-210px');
+            });
+        });
+        $(function() {
+            $('.medium').hover(function() {$('.jetterdn').css('top','-58px');;},
+                                function() {$('.jetterdn').css('top','-20px');
+            });
+        });
+        $(function() {
+            $('.web').hover(function() {$('.jetterdn').css('top','-116px');;},
+                                function() {$('.jetterdn').css('top','-20px');
+            });
+        });
 
 
         setTimeout(function(){$('.fadiner').addClass('gotransp');}, 1);
