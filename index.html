@@ -1,304 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset-UTF-8" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js" integrity="sha512-Q+IG0h7As6sfqE2t1Xf5IeamNyCXb4EXxGCA9Mlbpv7xtwurVHNdVDbyWeSQ3ulPf2FRlqeu77Ec3SJDdIR63w==" crossorigin="anonymous"></script>
-        <script src="OrbitControls.js"></script>
-        <link rel="stylesheet" href="moderat.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <title>h1m4n3hu | portfolio</title>
-    </head>
+<html>
+<head>
+    <title>h1m4n3hu | portfolio</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js" integrity="sha512-Q+IG0h7As6sfqE2t1Xf5IeamNyCXb4EXxGCA9Mlbpv7xtwurVHNdVDbyWeSQ3ulPf2FRlqeu77Ec3SJDdIR63w==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="OrbitControls.js"></script>
+    <link rel="stylesheet" href="moderat.css">
+</head>
+
 <body>
 
 <div id="mainer1"></div>
-<div id="mainer2"></div>
-<div id="mainer3"></div>
-<div id="mainer4"></div>
-<div id="mainer5"></div>
-<div class="lefthalf">
-    <div class="textt texttname">himanshu soni</div>
-    <div class="textt texttheadline">for the love of mondays.</div>
-    <div class="contacter">
-        <a class="sharelink linkedin">LINKEDIN</a><br>
-        <a class="sharelink medium">MEDIUM</a><br>
-        <a class="sharelink instagram">INSTAGRAM</a><br>
-        <a class="sharelink behance">BEHANCE</a><br>
-        <a class="sharelink web">WEB</a><br>
-        <a class="sharelink github">GITHUB</a><br>
+<div class="contacter">
+    <a class="sharelink linkedin">LINKEDIN</a><br>
+    <a class="sharelink medium">MEDIUM</a><br>
+    <a class="sharelink instagram">INSTAGRAM</a><br>
+    <a class="sharelink behance">BEHANCE</a><br>
+    <a class="sharelink web">WEB</a><br>
+    <a class="sharelink github">GITHUB</a><br>
+</div>
+<div class="attentn">
+    <div class="leftdiv">
+        <div class="leftdraw">
+        <div>linkedin.com/in/</div>
+        <div>@</div>
+        <div>behance.net/</div>
+        <div>github.com/</div>
+        </div>
+    </div>
+    <div class="middiv">
+        h1m4n3hu
+    </div>
+    <div class="rightdiv">
+        <div class="rightdraw">
+        <div>.medium.com</div>
+        <div>.github.io</div>
+        </div>
     </div>
 </div>
-<div class="gridded">
-    <div class="textup leftup" style="text-align: right; padding-right: 6px;">
-        <span class="jetterup">linkedin.com/in/<br>@<br>behance.net/<br>github.com/</span>
-    </div>
-    <span class="allet">h1m4n3hu</span>
-    <div class="textdn rightdn">
-        <br><span class="jetterdn">.medium.com<br>.github.io</span>
-    </div>
-</div>
-<div class="headhead projhead">works</div>
-<div class="artdiv">
-    <div class="arrt arrt1">asdfasdf</div>
-    <div class="arrt arrt2"></div>
-    <div class="arrt arrt3"></div>
-    <div class="arrt arrt4"></div>
-</div>
-<br>
-<div class="headhead projhead">arts</div>
-<div class="artdiv">
-    <div class="arrt arrt1"></div>
-    <div class="arrt arrt2"></div>
-</div>
-<br>
-<div class="headhead projhead">publishes</div>
-<div class="artdiv">
-    <div class="arrt arrt1"></div>
-    <div class="arrt arrt2"></div>
-    <div class="arrt arrt3"></div>
-</div>
-<br>
-<div class="headhead projhead">designs</div>
-<div class="artdiv">
-    <div class="arrt arrt1"></div>
-    <div class="arrt arrt2"></div>
-    <div class="arrt arrt3"></div>
-    <div class="arrt arrt4"></div>
-    <div class="arrt arrt5"></div>
-</div>
-
-<!-- <div class="fadiner"></div> -->
+<div class="fadiner"></div>
 
     <script>
-    {
-        var scene1=new THREE.Scene();
-        var cam1=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-        cam1.position.set(0,5,20);
-        var renderer1=new THREE.WebGLRenderer({antialias:true,alpha:true});
-        renderer1.setClearColor("rgb(150,150,150)");
-        renderer1.setPixelRatio(window.devicePixelRatio)
-        renderer1.setSize(window.innerWidth,window.innerHeight);
-        document.getElementById("mainer1").appendChild(renderer1.domElement);
-        var loader1=new THREE.TextureLoader();
-        
-        var radialSegments = 50;
-        var heightSegments = 30;
-        var openEnded = true;
-        var thetaStart = Math.PI * 0;
-        var thetaLength = Math.PI * 2;
-        var torer1a = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret1a=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
-        var torus1a=new THREE.Mesh(torer1a,toret1a);
-        torus1a.position.set(5,2,-3)
-        scene1.add(torus1a);
+    var scene1=new THREE.Scene();
+    var cam1=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+    cam1.position.set(0,5,20);
+    var renderer1=new THREE.WebGLRenderer({antialias:true,alpha:true});
+    renderer1.setClearColor("rgb(150,150,150)");
+    renderer1.setPixelRatio(window.devicePixelRatio)
+    renderer1.setSize(window.innerWidth,window.innerHeight);
+    document.getElementById("mainer1").appendChild(renderer1.domElement);
+    var loader1=new THREE.TextureLoader();
+    
+    var radialSegments = 50;
+    var heightSegments = 30;
+    var openEnded = true;
+    var thetaStart = Math.PI * 0;
+    var thetaLength = Math.PI * 2;
+    var torer1a = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+    var toret1a=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
+    var torus1a=new THREE.Mesh(torer1a,toret1a);
+    torus1a.position.set(5,2,-3)
+    scene1.add(torus1a);
 
-        var torer2a = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret2a=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
-        var torus2a=new THREE.Mesh(torer2a,toret2a);
-        torus2a.rotation.z=Math.PI/4;
-        torus2a.position.set(5,2,1)
-        scene1.add(torus2a);
+    var torer2a = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
+    var toret2a=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
+    var torus2a=new THREE.Mesh(torer2a,toret2a);
+    torus2a.rotation.z=Math.PI/4;
+    torus2a.position.set(5,2,1)
+    scene1.add(torus2a);
 
-        var light1=new THREE.AmbientLight(0xffffff,1,400);
-        light1.position.set(10,10,10);
-        scene1.add(light1);
+    var light1=new THREE.AmbientLight(0xffffff,1,400);
+    light1.position.set(10,10,10);
+    scene1.add(light1);
 
-        render1=()=>{
-            requestAnimationFrame(render1);
-            torus1a.rotation.y+=0.005;
-            torus2a.rotation.x+=0.005;
-            renderer1.render(scene1,cam1);
-        }
-        render1();        
-        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
-
-
-
-        var scene2=new THREE.Scene();
-        var cam2=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-        cam2.position.set(4,0,2);
-        var renderer2=new THREE.WebGLRenderer({antialias:true,alpha:true});
-        renderer2.setClearColor("rgb(150,150,150)");
-        renderer2.setPixelRatio(window.devicePixelRatio)
-        renderer2.setSize(window.innerWidth,window.innerHeight);
-        document.getElementById("mainer2").appendChild(renderer2.domElement);
-        var loader2=new THREE.TextureLoader();
-
-        var torer1b = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret1b=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
-        var torus1b=new THREE.Mesh(torer1b,toret1b);
-        torus1b.rotation.z=Math.PI/10;
-        torus1b.position.set(5,0,-3)
-        scene2.add(torus1b);
-
-        var torer2b = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret2b=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
-        var torus2b=new THREE.Mesh(torer2b,toret2b);
-        torus2b.rotation.z=Math.PI/4;
-        torus2b.position.set(5,0,1)
-        //scene2.add(torus2b);
-
-        var light2=new THREE.AmbientLight(0xffffff,1,400);
-        light2.position.set(10,10,10);
-        scene2.add(light2);
-
-        render2=()=>{
-            requestAnimationFrame(render2);
-            torus1b.rotation.y+=0.005;
-            torus2b.rotation.x+=0.005;
-            renderer2.render(scene2,cam2);
-        }
-        render2();        
-        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
-
-
-        var scene3=new THREE.Scene();
-        var cam3=new THREE.PerspectiveCamera(70,window.innerWidth/window.innerHeight,0.1,1000);
-        cam3.position.set(0,0,15);
-        var renderer3=new THREE.WebGLRenderer({antialias:true,alpha:true});
-        renderer3.setClearColor("rgb(150,150,150)");
-        renderer3.setPixelRatio(window.devicePixelRatio)
-        renderer3.setSize(window.innerWidth,window.innerHeight);
-        document.getElementById("mainer3").appendChild(renderer3.domElement);
-        var loader3=new THREE.TextureLoader();
-
-        var torer1c = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret1c=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
-        var torus1c=new THREE.Mesh(torer1c,toret1c);
-        torus1c.position.set(5,0,-3)
-        //scene3.add(torus1c);
-
-        var torer2c = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret2c=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
-        var torus2c=new THREE.Mesh(torer2c,toret2c);
-        torus2c.rotation.z=Math.PI/2;
-        torus2c.position.set(5,0,1)
-        scene3.add(torus2c);
-
-        var light3=new THREE.AmbientLight(0xffffff,1,400);
-        light3.position.set(10,10,10);
-        scene3.add(light3);
-
-        render3=()=>{
-            requestAnimationFrame(render3);
-            //torus1c.rotation.y+=0.005;
-            torus2c.rotation.y+=0.005;
-            renderer3.render(scene3,cam3);
-        }
-        render3();        
-        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
-
-
-        var scene4=new THREE.Scene();
-        var cam4=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-        cam4.position.set(-3,1,10);
-        var renderer4=new THREE.WebGLRenderer({antialias:true,alpha:true});
-        renderer4.setClearColor("rgb(150,150,150)");
-        renderer4.setPixelRatio(window.devicePixelRatio)
-        renderer4.setSize(window.innerWidth,window.innerHeight);
-        document.getElementById("mainer4").appendChild(renderer4.domElement);
-        var loader4=new THREE.TextureLoader();
-
-        var torer1d = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret1d=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
-        var torus1d=new THREE.Mesh(torer1d,toret1d);
-        torus1d.position.set(5,-1,-3)
-        scene4.add(torus1d);
-
-        var torer2d = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret2d=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
-        var torus2d=new THREE.Mesh(torer2d,toret2d);
-        torus2d.position.set(6,2.5,1)
-        scene4.add(torus2d);
-
-        var light4=new THREE.AmbientLight(0xffffff,1,400);
-        light4.position.set(10,10,10);
-        scene4.add(light4);
-
-        render4=()=>{
-            requestAnimationFrame(render4);
-            torus1d.rotation.y+=0.005;
-            torus2d.rotation.y+=0.005;
-            renderer4.render(scene4,cam4);
-        }
-        render4();        
-        //controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
-
-
-        var scene5=new THREE.Scene();
-        var cam5=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-        cam5.position.set(2,0,20);
-        var renderer5=new THREE.WebGLRenderer({antialias:true,alpha:true});
-        renderer5.setClearColor("rgb(150,150,150)");
-        renderer5.setPixelRatio(window.devicePixelRatio)
-        renderer5.setSize(window.innerWidth,window.innerHeight);
-        document.getElementById("mainer5").appendChild(renderer5.domElement);
-        var loader5=new THREE.TextureLoader();
-
-        var torer1e = new THREE.CylinderBufferGeometry(10, 10, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret1e=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("h1m4.png"), side:THREE.DoubleSide});
-        var torus1e=new THREE.Mesh(torer1e,toret1e);
-        torus1e.rotation.z=Math.PI/2;
-        torus1e.position.set(4,0,0)
-        scene5.add(torus1e);
-
-        var torer2e = new THREE.CylinderBufferGeometry(8, 8, 1.5, radialSegments, heightSegments, openEnded, thetaStart, thetaLength);
-        var toret2e=new THREE.MeshLambertMaterial({wireframe:false, transparent: true, opacity: 0.9, map:loader1.load("5on1.png"), side:THREE.DoubleSide});
-        var torus2e=new THREE.Mesh(torer2e,toret2e);
-        torus2e.rotation.z=Math.PI/2;
-        torus2e.position.set(0,0,0)
-        scene5.add(torus2e);
-
-        var light5=new THREE.AmbientLight(0xffffff,1,400);
-        light5.position.set(10,10,10);
-        scene5.add(light5);
-
-        render5=()=>{
-            requestAnimationFrame(render5);
-            torus1e.rotation.x+=0.005;
-            torus2e.rotation.x-=0.005;
-            renderer5.render(scene5,cam5);
-        }
-        render5();
+    render1=()=>{
+        requestAnimationFrame(render1);
+        torus1a.rotation.y+=0.005;
+        torus2a.rotation.x+=0.005;
+        renderer1.render(scene1,cam1);
     }
+    render1();        
+    controls1=new THREE.OrbitControls(cam1,renderer1.domElement);
+
+    $(function() {
+        $('.linkedin').hover(function() {$('.leftdraw').css('top','0px');;},
+                                function() {$('.leftdraw').css('top','50px');
+        });
+    });
+    $(function() {
+        $('.instagram').hover(function() {$('.leftdraw').css('top','-50px');;},
+                                function() {$('.leftdraw').css('top','50px');
+        });
+    });
+    $(function() {
+        $('.behance').hover(function() {$('.leftdraw').css('top','-100px');;},
+                                function() {$('.leftdraw').css('top','50px');
+        });
+    });
+    $(function() {
+        $('.github').hover(function() {$('.leftdraw').css('top','-150px');;},
+                                function() {$('.leftdraw').css('top','50px');
+        });
+    });
 
 
+    $(function() {
+        $('.medium').hover(function() {$('.rightdraw').css('top','0px');;},
+                                function() {$('.rightdraw').css('top','50px');
+        });
+    });
+    $(function() {
+        $('.web').hover(function() {$('.rightdraw').css('top','-50px');;},
+                                function() {$('.rightdraw').css('top','50px');
+        });
+    });
 
 
-        $(function() {
-            $('.linkedin').hover(function() {$('.jetterup').css('top','0');;},
-                                 function() {$('.jetterup').css('top','-210px');
-            });
-        });
-        $(function() {
-            $('.instagram').hover(function() {$('.jetterup').css('top','-60px');;},
-                                 function() {$('.jetterup').css('top','-210px');
-            });
-        });
-        $(function() {
-            $('.behance').hover(function() {$('.jetterup').css('top','-115px');;},
-                                function() {$('.jetterup').css('top','-210px');
-            });
-        });
-        $(function() {
-            $('.github').hover(function() {$('.jetterup').css('top','-174px');;},
-                                function() {$('.jetterup').css('top','-210px');
-            });
-        });
-        $(function() {
-            $('.medium').hover(function() {$('.jetterdn').css('top','-58px');;},
-                                function() {$('.jetterdn').css('top','-20px');
-            });
-        });
-        $(function() {
-            $('.web').hover(function() {$('.jetterdn').css('top','-116px');;},
-                                function() {$('.jetterdn').css('top','-20px');
-            });
-        });
-
-
-        setTimeout(function(){$('.fadiner').addClass('gotransp');}, 1);
-        setTimeout(function(){$('.fadiner').css({"width":"0","heigth":"0"});}, 3000);
-        
+    setTimeout(function(){$('.fadiner').addClass('gotransp');}, 1);
+    setTimeout(function(){$('.fadiner').css({"width":"0","heigth":"0"});}, 3000);
     </script>
+
 </body>
 </html>
