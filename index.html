@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Mesh lambert dark shade wala hota h-->
+        <meta http-equiv="content-type" content="text/html; charset-UTF-8"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js" integrity="sha512-Q+IG0h7As6sfqE2t1Xf5IeamNyCXb4EXxGCA9Mlbpv7xtwurVHNdVDbyWeSQ3ulPf2FRlqeu77Ec3SJDdIR63w==" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script src="OrbitControls.js"></script>
+
+        <style>
+            #mainer{
+                position: sticky;
+                top: 0;
+                left: 0;
+                z-index: -10;
+                overflow: hidden;
+            }
+
+            .transparen{
+                background-color: rgba(100,100,100,0);
+            }
+        </style>
+        
+    </head>
+<body style="margin: 0;">
+    <div id="mainer"></div>
+
+    <section class="transparen text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+        <div class="lg:w-4/6 mx-auto">
+        <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://cdn.wallpapersafari.com/84/42/ZCWvwj.jpg">
+        </div>
+        <div class="flex flex-col sm:flex-row mt-10">
+            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+            <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
+                <img src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt="" srcset="">
+            </div>
+            <div class="flex flex-col items-center text-center justify-center">
+                <h2 class="font-medium title-font mt-4 text-white text-lg">Himanshu Soni</h2>
+                <div class="w-12 h-1 bg-black-500 rounded mt-2 mb-4"></div>
+                <p class="text-base text-gray-400">IITM-2023 | Developer | Monday</p>
+            </div>
+            </div>
+            <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+            <p class="leading-relaxed text-lg mb-4">
+                The person who does not have a problem with Mondays.
+                Fascinated by learning -as great Joey Tribbiani said- Knowledge is a tricky thing.
+                I lick books, code and movies. I find it all Predestination, Inception and then Final Destination.
+                More of Pygamer than a Gamer and more of Django Explained than Django Unchained.
+                Can sit in a chair for more hours than you do. Please don't kill me though.
+                I believe in Myself just like you believe in The magical man in the sky.
+                Thank You. Come Again.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="transparen text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-white">'Tis but a fam</h1>
+        </div>
+        <div class="flex flex-wrap -m-4">
+        <div class="p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-900 bg-opacity-60 p-8 flex-col">
+            <div class="flex-grow">
+                <p class="leading-relaxed text-base">Honey is truly the God. He always has key to our problems. May he bless us. And we had a deal. Hail Honey.</p>
+                <a class="mt-3 text-blue-400 inline-flex items-center">Enterprenure, Investor</a>
+            </div>
+            <div class="flex items-center mb-3">
+                <h2 class="text-white text-lg title-font font-medium">Aman Sachdev</h2>
+            </div>
+            </div>
+        </div>
+        <div class="p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-900 bg-opacity-60 p-8 flex-col">
+            <div class="flex-grow">
+                <p class="leading-relaxed text-base">He is the funniest guy Ive ever met. Ohh my.</p><br><br> 
+                <a class="mt-3 text-blue-400 inline-flex items-center">asdfasdasf</a>
+            </div>
+            <div class="flex items-center mb-3">
+                <h2 class="text-white text-lg title-font font-medium">asasddfasdf</h2>
+            </div>
+            </div>
+        </div>
+        <div class="p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-900 bg-opacity-60 p-8 flex-col">
+            <div class="flex-grow">
+                <p class="leading-relaxed text-base">bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle </p>
+                <a class="mt-3 text-blue-400 inline-flex items-center">bottle</a>
+            </div>
+            <div class="flex items-center mb-3">
+                <h2 class="text-white text-lg title-font font-medium">bottle bottle</h2>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    
+
+    
+    <script>
+        var scene=new THREE.Scene();
+        var cam=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+        cam.lookAt(0,0,0)
+        cam.position.set(5,1,15);
+        var renderer=new THREE.WebGLRenderer({antialias:true});
+        renderer.setClearColor("rgb(0,0,0)");
+        renderer.setSize(window.innerWidth,window.innerHeight);
+        document.getElementById("mainer").appendChild(renderer.domElement);
+
+        var light1=new THREE.PointLight(0xffffff,1,1000);
+        light1.position.set(10,0,20);
+        scene.add(light1);
+        var light2=new THREE.PointLight(0xff0000,1,1000);
+        light2.position.set(-10,0,10);
+        scene.add(light2);
+        var light3=new THREE.PointLight(0x00ff00,1,1000);
+        light3.position.set(0,10,10);
+        scene.add(light3);
+        var light4=new THREE.PointLight(0x0000ff,1,1000);
+        light4.position.set(0,10,0);
+        scene.add(light4);
+
+        /*var sphere=new THREE.Mesh(new THREE.SphereGeometry(0.5,100,100),new THREE.MeshBasicMaterial({wireframe:false,color:0xffffff}));
+        sphere.position.set(10,0,20)
+        scene.add(sphere);*/
+
+        var spherer=new THREE.SphereGeometry(10,1,1);
+        var spheret=new THREE.MeshPhongMaterial({wireframe:true});
+        var sphere=new THREE.Mesh(spherer,spheret);
+        sphere.position.set(0,0,0)
+        scene.add(sphere);
+
+        var cubing=(xx,yy,zz,lx,ly,lz)=>{
+            var cuber=new THREE.BoxGeometry(lx,ly,lz);
+            var cubet=new THREE.MeshLambertMaterial({color:0x333333});
+            var cube=new THREE.Mesh(cuber,cubet);
+            cube.position.set(xx,yy,zz)
+            scene.add(cube);
+        }
+        cubing(-2,0,0,1,6,1);
+        cubing(2,0,0,1,6,1);
+        cubing(0.5,1,0,2,1,1);
+        cubing(-0.5,-1,0,2,1,1);
+
+        render=()=>{
+            var time=Date.now()*0.0005;
+            requestAnimationFrame(render);
+            light1.position.set(Math.sin(time*0.7)*30,Math.cos(time*0.5)*40,Math.sin(time*0.3)*50);
+            light2.position.set(Math.sin(time*0.7)*30,Math.cos(time*0.5)*40,Math.cos(time*0.3)*50);
+            light3.position.set(Math.cos(time*0.7)*30,Math.cos(time*0.5)*40,Math.sin(time*0.3)*50);
+            light4.position.set(Math.cos(time*0.7)*30,Math.sin(time*0.5)*40,Math.cos(time*0.3)*50);
+            cam.position.set(Math.cos(time*0.14)*15,Math.sin(time*0.25)*15,Math.cos(time*0.15)*15);
+            cam.lookAt(0,0,0)
+            renderer.render(scene,cam);
+        }
+        render();        
+        controls=new THREE.OrbitControls(cam,renderer.domElement);
+        
+    </script>
+</body>
+</html>
