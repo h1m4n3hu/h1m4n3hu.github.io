@@ -24,6 +24,11 @@
             .transparen{
                 background-color: rgba(100,100,100,0);
             }
+
+            ::selection {
+                color: black;
+                background: white;
+            }
         </style>
         
     </head>
@@ -44,13 +49,13 @@
             <div class="flex flex-col items-center text-center justify-center">
                 <h2 class="font-medium title-font mt-4 text-white text-lg">Himanshu Soni</h2>
                 <div class="w-12 h-1 bg-black-500 rounded mt-2 mb-4"></div>
-                <p class="text-base text-gray-400">IITM-2023 | Developer | Monday</p>
+                <p class="text-base text-gray-400">IITM-2023 | Python | Monday</p>
             </div>
             </div>
             <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
             <p class="leading-relaxed text-lg mb-4">
                 The person who does not have a problem with Mondays.
-                Fascinated by learning -as great Joey Tribbiani said- Knowledge is a tricky thing.
+                Fascinated by learning- as great Joey Tribbiani said- Knowledge is a tricky thing.
                 I lick books, code and movies. I find it all Predestination, Inception and then Final Destination.
                 More of Pygamer than a Gamer and more of Django Explained than Django Unchained.
                 Can sit in a chair for more hours than you do. Please don't kill me though.
@@ -62,6 +67,48 @@
     </div>
     </section>
 
+    <section class="transparen text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col">
+            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+                <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">This is beyond science.</h1>
+            </div>
+            </div>
+        <div class="container px-5 py-12 mx-auto">
+            <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
+            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+                <img src="https://i.ibb.co/JnZ6QFt/youcir.png" alt="" srcset="">
+            </div>
+            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                <h2 class="text-white text-lg title-font font-medium mb-2">Shooting Stars</h2>
+                <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">Learn More</a>
+            </div>
+            </div>
+            <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
+            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                <h2 class="text-white text-lg title-font font-medium mb-2">The Catalyzer</h2>
+                <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">Learn More</a>
+            </div>
+            <div class="sm:w-32 order-first sm:order-none sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+                <img src="https://i.ibb.co/JnZ6QFt/youcir.png" alt="" srcset="">
+            </div>
+            </div>
+            <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+                <img src="https://i.ibb.co/N2fq0XS/iitcir.png" alt="" srcset="">
+            </div>
+            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                <h2 class="text-white text-lg title-font font-medium mb-2">The 400 Blows</h2>
+                <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">Learn More</a>
+            </div>
+            </div>
+            <button class="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        </div>            
+    </section>
+    
     <section class="transparen text-gray-400 bg-gray-900 body-font">
     <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-col">
@@ -76,7 +123,7 @@
             </div>
             <h2 class="text-xl font-medium title-font text-white mt-5">Intendo</h2>
             <p class="text-base leading-relaxed mt-2">Intendo is a part of the django's behaviour and interaction to the real world. Not the prettiest but an awesome artwork for programmers in the real world that have been waiting for their next breath to make a change.</p>
-            <a class="text-indigo-400 inline-flex items-center mt-3" href="http://intendo.pythonanywhere.com/">Learn More</a>
+            <a class="text-indigo-400 inline-flex items-center mt-3" href="http://intendo.pythonanywhere.com/">Visit</a>
         </div>
         <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
             <div class="rounded-lg h-64 overflow-hidden">
@@ -84,29 +131,27 @@
             </div>
             <h2 class="text-xl font-medium title-font text-white mt-5">Spoti.py</h2>
             <p class="text-base leading-relaxed mt-2">A Spotify Clone made completely in Python- using only TKinter and Pygame, along with a local database using MySQL. Immaculate enough to make you wonder if Spotify for PC is made in Python. No lol its not! XD</p>
-            <a class="text-indigo-400 inline-flex items-center mt-3">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-            </a>
+            <a class="text-indigo-400 inline-flex items-center mt-3">Visit</a>
         </div>
         <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
             <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/wcrY97W/image.png">
             </div>
-            <h2 class="text-xl font-medium title-font text-white mt-5">The 400 Blows</h2>
-            <p class="text-base leading-relaxed mt-2">Swag shoindegoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-            <a class="text-indigo-400 inline-flex items-center mt-3">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-            </a>
+            <h2 class="text-xl font-medium title-font text-white mt-5">ThreeJS-D Earth</h2>
+            <p class="text-base leading-relaxed mt-2">A 3-D rendered image of a planet, which was named by us. We live on it. And since you realize I created it...you know what i mean. A minimal piece of art based on Javascript Libraries.</p>
+            <a class="text-indigo-400 inline-flex items-center mt-3">Visit</a>
         </div>
         </div>
     </div>
     </section>
-
+    
     <section class="transparen text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col">
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+            <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">Easy way to paint bushes.</h1>
+        </div>
+    </div>
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
         <div class="lg:w-2/3 mx-auto">
         <div class="flex flex-wrap w-full bg-gray-800 py-32 px-10 relative mb-4">
@@ -124,7 +169,7 @@
         <div class="flex flex-wrap -mx-2">
             <div class="px-2 w-1/2">
             <div class="flex flex-wrap w-full bg-gray-800 sm:py-24 py-16 sm:px-10 px-6 relative">
-                <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://images.pexels.com/photos/343701/pexels-photo-343701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://i.ibb.co/ZXBC3Gf/Screenshot-2021-01-19-155944.png">
                 <div class="text-center relative z-10 w-full">
                 <h2 class="text-xl text-white font-medium title-font mb-2">Shooting Stars</h2>
                 <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
@@ -148,49 +193,6 @@
                     </svg>
                 </a>
                 </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-    
-    <section class="transparen text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-        <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font text-white">'Tis but a fam</h1>
-        </div>
-        <div class="flex flex-wrap -m-4">
-        <div class="p-4 md:w-1/3">
-            <div class="flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
-            <div class="flex-grow">
-                <p class="leading-relaxed text-base">Honey is truly the God. He always has key to our problems. May he bless us. And we had a deal. Hail Honey.</p>
-                <a class="mt-3 text-blue-400 inline-flex items-center">Enterprenure, Investor</a>
-            </div>
-            <div class="flex items-center mb-3">
-                <h2 class="text-white text-lg title-font font-medium">Aman Sachdev</h2>
-            </div>
-            </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-            <div class="flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
-            <div class="flex-grow">
-                <p class="leading-relaxed text-base">He is the funniest guy Ive ever met. Ohh my.</p><br><br> 
-                <a class="mt-3 text-blue-400 inline-flex items-center">asdfasdasf</a>
-            </div>
-            <div class="flex items-center mb-3">
-                <h2 class="text-white text-lg title-font font-medium">asasddfasdf</h2>
-            </div>
-            </div>
-        </div>
-        <div class="p-4 md:w-1/3">
-            <div class="flex rounded-lg h-full bg-gray-700 bg-opacity-60 p-8 flex-col">
-            <div class="flex-grow">
-                <p class="leading-relaxed text-base">bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle bottle </p>
-                <a class="mt-3 text-blue-400 inline-flex items-center">bottle</a>
-            </div>
-            <div class="flex items-center mb-3">
-                <h2 class="text-white text-lg title-font font-medium">bottle bottle</h2>
             </div>
             </div>
         </div>
