@@ -32,7 +32,7 @@
         </style>
 
     </head>
-<body>
+<body onmousemove="mouse_position(event)">
     <div id="mainer"></div>
 
     <section class="transparen text-gray-400 bg-gray-900 body-font">
@@ -309,7 +309,7 @@
         var scene=new THREE.Scene();
         var cam=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
         cam.lookAt(0,0,0)
-        cam.position.set(5,1,15);
+        cam.position.set(0,0,13);
         var renderer=new THREE.WebGLRenderer({antialias:true});
         renderer.setClearColor("rgb(0,0,0)");
         renderer.setSize(window.innerWidth,window.innerHeight);
@@ -340,7 +340,7 @@
 
         var cubing=(xx,yy,zz,lx,ly,lz)=>{
             var cuber=new THREE.BoxGeometry(lx,ly,lz);
-            var cubet=new THREE.MeshLambertMaterial({color:0x333333});
+            var cubet=new THREE.MeshPhongMaterial({color:0x333333});
             var cube=new THREE.Mesh(cuber,cubet);
             cube.position.set(xx,yy,zz)
             scene.add(cube);
@@ -348,7 +348,13 @@
         cubing(-2,0,0,1,6,1);
         cubing(2,0,0,1,6,1);
         cubing(0.5,1,0,2,1,1);
-        cubing(-0.5,-1,0,2,1,1);
+        cubing(-0.5,-1,0,2,1,1); 
+
+
+        function mouse_position(e){
+            cam.position.set((e.clientX-660)/75,(e.clientY-330)/75,13);
+        }
+
 
         render=()=>{
             var time=Date.now()*0.0005;
@@ -357,7 +363,8 @@
             light2.position.set(Math.sin(time*0.7)*30,Math.cos(time*0.5)*40,Math.cos(time*0.3)*50);
             light3.position.set(Math.cos(time*0.7)*30,Math.cos(time*0.5)*40,Math.sin(time*0.3)*50);
             light4.position.set(Math.cos(time*0.7)*30,Math.sin(time*0.5)*40,Math.cos(time*0.3)*50);
-            cam.position.set(Math.cos(time*0.14)*15,Math.sin(time*0.25)*15,Math.cos(time*0.15)*15);
+            sphere.rotation.set(Math.cos(time*0.02)*10,Math.sin(time*0.03)*15,Math.cos(time*0.01)*20);
+            // cam.position.set(Math.cos(time*0.14)*15,Math.sin(time*0.25)*15,Math.cos(time*0.15)*15);
             cam.lookAt(0,0,0)
             renderer.render(scene,cam);
         }
