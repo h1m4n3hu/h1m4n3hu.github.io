@@ -8,31 +8,25 @@
         <script src="OrbitControls.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
         <title>h1m4n3hu | Portfolio</title>
         <style>
 
-            body{
-                margin: 0;
-                background-color: #000;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-            #mainer{
-                position: sticky;
-                top: 0;
-                left: 0;
-                z-index: -10;
-                overflow: hidden;
-            }
-            .transparen{
-                background-color: rgba(100,100,100,0);
-            }
-            ::selection {
-                color: black;
-                background: rgba(255,255,255,0.5);
-            }
 
 
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
+
+/*my own*/
+body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+#mainer{position: sticky;top: 0;left: 0;z-index: -10;overflow: hidden;}
+.transparen{background-color: rgba(100,100,100,0);}
+::selection {color: black;background: rgba(255,255,255,0.5);}
+
+/*boot*/
 .allet{position: absolute;top: 0;left: 0;width: 100%;height: 100vh;color: wheat;display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;transition: color 3s linear;}
 .named{font-family: 'Roboto Slab', serif;font-size: 3em;}
 .press{font-family: 'Sacramento', cursive;font-size: 3rem;}
@@ -43,7 +37,7 @@
 .hidbox{display:inline-block;overflow:hidden;color: white;}
 .otwo{font-size: 5rem;font-family: 'Raleway', sans-serif;position: relative;bottom: -6rem;transition: bottom 0.4s linear;}
 
-
+/*progress*/
 .progress {background: rgba(255,255,255,0.1);justify-content: flex-start;border-radius: 100px;align-items: center;position: relative;padding: 5px 5px;display: flex;height: 3px;width: 500px;transition: background-color 3s linear;}
 .progress-value {animation: load 4s normal forwards;box-shadow: 0 10px 40px -10px wheat;border-radius: 100px;background: wheat;height: 2px;width: 0;transition: background-color 3s linear;}
 .progress-vanish{background: rgba(0,0,0,0);}
@@ -54,29 +48,6 @@
 }
 
 
-label{display:flex;flex-direction:column;width:50px;cursor:pointer;position: fixed;top: 30px;left: 30px;z-index: 20;}
-label span{background: wheat;border-radius:10px;height:5px;margin: 5px 0;transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);}
-span:nth-of-type(1){width:50%;}
-span:nth-of-type(2){width:100%;}
-span:nth-of-type(3){width:75%;}
-
-input[type="checkbox"]{display:none;}
-input[type="checkbox"]:checked ~ span:nth-of-type(1){transform-origin:bottom;transform:rotatez(45deg) translate(8px,0px);}
-input[type="checkbox"]:checked ~ span:nth-of-type(2){transform-origin:top;transform:rotatez(-45deg);}
-input[type="checkbox"]:checked ~ span:nth-of-type(3){transform-origin:bottom;width:50%;transform: translate(20px,-9px) rotatez(45deg);}
-
-
-.blurmenu{
-    width: 2000px;
-    height: 0px;
-    position: fixed;
-    top: -250px;
-    left: -250px;
-    z-index: 12;
-    backdrop-filter: blur(7px);
-    transition: 1s;
-    transform: rotate(-20deg);
-}
 
 
         </style>
@@ -95,23 +66,13 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){transform-origin:bottom;wid
     </div>
     </div>
 
-
-    <div class="blurmenu" id="blurmenu"></div>
-
-
-    <label for="check" id="chekunchek">
-        <input type="checkbox" id="check"/> 
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
    
 
     <section class="transparen text-gray-400 bg-gray-900 body-font">
     <div class="container px-5 py-0 mx-auto flex flex-col">
         <div class="lg:w-4/6 mx-auto">
         <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/f14dcQz/IMG-20210911-135728.jpg">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/Kx4LTjG/the.png">
         </div>
         <div class="flex flex-col sm:flex-row mt-10">
             <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
@@ -147,6 +108,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){transform-origin:bottom;wid
             </div>
             </div>
         <div class="container px-5 py-12 mx-auto">
+
             <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
             <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
                 <img src="https://i.ibb.co/JQJbn4J/1623646179327-modified.png" alt="" srcset="">
@@ -158,15 +120,16 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){transform-origin:bottom;wid
             </div>
             </div>
             <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
+            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+                <img src="https://i.ibb.co/JnZ6QFt/youcir.png" alt="" srcset="">
+            </div>
             <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                <h2 class="text-white text-lg title-font font-medium mb-2">YouTube</h2>
+                <h2 class="text-white text-lg title-font font-medium mb-2">Youtube</h2>
                 <p class="leading-relaxed text-base">Like every other kid I learned Programming from one of the biggest institutes of the planet.</p>
                 <a class="mt-3 text-indigo-400 inline-flex items-center" href="https://www.youtube.com/">Visit</a>
             </div>
-            <div class="sm:w-32 order-first sm:order-none sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
-                <img src="https://i.ibb.co/JnZ6QFt/youcir.png" alt="" srcset="">
             </div>
-            </div>
+
             <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
             <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
                 <img src="https://i.ibb.co/N2fq0XS/iitcir.png" alt="" srcset="">
@@ -341,6 +304,8 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){transform-origin:bottom;wid
     </div>
     </section>
 
+    <div class="rounded-lg h-64 overflow-hidden" id="gameDiv">
+    </div>
 
     <!--section class="transparen text-gray-400 bg-gray-900 body-font">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
@@ -458,12 +423,89 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){transform-origin:bottom;wid
         }, 10000);
 
 
-        $("#chekunchek").click(function() {
-            if ( $(".blurmenu").height() != 0)
-                $(".blurmenu").animate({ height: 0 }, 200 );
-            else
-                $(".blurmenu").animate({ height: 1500 }, 200 );
-        });
+
+        //mini-game
+        let app;
+        let keys={};
+        let script={};
+        var look=true;
+        
+        window.onload=function(){
+            app=new PIXI.Application({width:1500,height:450,transparent:true});
+            document.querySelector("#gameDiv").appendChild(app.view);
+
+            app.loader.add("plyr","meaf.png");
+            app.loader.load(doneLoading);
+
+            window.addEventListener("keydown",keysdown);
+            window.addEventListener("keyup",keysup);
+        }
+
+        function playerSheet(){
+        let sheet=new PIXI.BaseTexture.from(app.loader.resources["plyr"].url);
+        let w=48;
+        let h=96;
+        script["standing"]=[new PIXI.Texture(sheet,new PIXI.Rectangle(w,2*h,w,h))];
+        script["walkright"]=[
+            new PIXI.Texture(sheet,new PIXI.Rectangle(0*w,2*h,w,h)),
+            new PIXI.Texture(sheet,new PIXI.Rectangle(1*w,2*h,w,h)),
+            new PIXI.Texture(sheet,new PIXI.Rectangle(2*w,2*h,w,h)),
+        ];
+        script["walkleft"]=[
+            new PIXI.Texture(sheet,new PIXI.Rectangle(0*w,h,w,h)),
+            new PIXI.Texture(sheet,new PIXI.Rectangle(2*w,h,w,h)),
+            new PIXI.Texture(sheet,new PIXI.Rectangle(1*w,h,w,h)),
+        ];
+        }
+
+        function thePlayer(){
+        pl=new PIXI.AnimatedSprite(script.standing);
+        pl.anchor.set(0.5);
+        pl.animationSpeed=0.25;
+        pl.loop=false;
+        pl.x=200;
+        pl.y=215;
+        app.stage.addChild(pl);
+        }
+
+        function doneLoading(e){
+        playerSheet();
+        thePlayer();
+        app.ticker.add(gameloop);
+        }
+
+        function keysdown(e){
+        keys[e.keyCode]=true;
+        }
+        function keysup(e){
+            keys[e.keyCode]=false;
+        }
+        function gameloop(){
+            if (keys["37"]){
+            look=false;
+            if (!pl.playing){
+                pl.textures=script.walkleft;
+                pl.play();
+            }
+            pl.x-=3;
+            if (pl.x<-20){
+                pl.x=1400;
+            }
+            }
+
+            else if (keys["39"]){
+            look=true;
+            if (!pl.playing){
+                pl.textures=script.walkright;
+                pl.play();
+            }
+            pl.x+=3;
+            if (pl.x>1400){
+                pl.x=-20
+            }
+            }
+        }
+
 
     </script>
 </body>
