@@ -2,30 +2,26 @@
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset-UTF-8"/>
+        <meta name="theme-color" content="#000">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js" integrity="sha512-Q+IG0h7As6sfqE2t1Xf5IeamNyCXb4EXxGCA9Mlbpv7xtwurVHNdVDbyWeSQ3ulPf2FRlqeu77Ec3SJDdIR63w==" crossorigin="anonymous"></script>
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="OrbitControls.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
         <title>h1m4n3hu | Portfolio</title>
-        <style>
-
-
-
-::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
-}
-
-
+<style>
+@import url(https://fonts.googleapis.com/css?family=Righteous);
 /*my own*/
-body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
-#mainer{position: sticky;top: 0;left: 0;z-index: -10;overflow: hidden;}
+body{margin: 0;background-color: #000;font-family: 'Josefin Sans', sans-serif !important;}
+.mt_div{width: 0px; height: 300px; background-color: #fff;}
+#mainer{position: fixed;top: 0;left: 0;z-index: -10;overflow: hidden;} /* change sticky to fixed */
 .transparen{background-color: rgba(100,100,100,0);}
 ::selection {color: black;background: rgba(255,255,255,0.5);}
-
+::-webkit-scrollbar {width: 0;  /* Remove scrollbar space */background: transparent;  /* Optional: just make scrollbar invisible */}
 /*boot*/
 .allet{position: absolute;top: 0;left: 0;width: 100%;height: 100vh;color: wheat;display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;transition: color 3s linear;}
 .named{font-family: 'Roboto Slab', serif;font-size: 3em;}
@@ -36,7 +32,6 @@ body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans 
 .contain{width: 100%;height: 95vh;display: flex;justify-content: center;align-items: center;}
 .hidbox{display:inline-block;overflow:hidden;color: white;}
 .otwo{font-size: 5rem;font-family: 'Raleway', sans-serif;position: relative;bottom: -6rem;transition: bottom 0.4s linear;}
-
 /*progress*/
 .progress {background: rgba(255,255,255,0.1);justify-content: flex-start;border-radius: 100px;align-items: center;position: relative;padding: 5px 5px;display: flex;height: 3px;width: 500px;transition: background-color 3s linear;}
 .progress-value {animation: load 4s normal forwards;box-shadow: 0 10px 40px -10px wheat;border-radius: 100px;background: wheat;height: 2px;width: 0;transition: background-color 3s linear;}
@@ -47,301 +42,192 @@ body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans 
     100% { width: 100%; }
 }
 
+.behindtext{font-size: 10rem; transform: rotate(-90deg); position: absolute;font-family: Righteous;background: linear-gradient(to right, #f32170,#ff6b08, #cf23cf, #eedd44);-webkit-text-fill-color: transparent;-webkit-background-clip: text;}
+@media only screen and (max-width: 600px) {
+  .behindtext {display: none;}
+}
+.textgradi,.behindtext{
+background-image: linear-gradient(right, #111 11%, #333 56%);
+background-image: -o-linear-gradient(right, #111 11%, #333 56%);
+background-image: -moz-linear-gradient(right, #111 11%, #333 56%);
+background-image: -webkit-linear-gradient(right, #111 11%, #333 56%);
+background-image: -ms-linear-gradient(right, #111 11%, #333 56%);
+background-image: gradient(right, #111 11%, #333 56%);  
+}
 
+#gameDiv{border: solid #333 10px;}
 
-
-        </style>
-
+</style>
     </head>
+
 <body onmousemove="mouse_position(event)">
+
     <div id="mainer"></div>
 
-
-    <div class="filler">
-    <div class="allet">
+    <!-- <div class="filler">
+    <div class="allet">                                                        TO BE ADDED BEFORE SYNC
         <div class="named">h1m4n3hu</div>
         <div class="progress">
             <div class="progress-value"></div>
         </div>
     </div>
-    </div>
+    </div> -->
 
    
 
-    <section class="transparen text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-0 mx-auto flex flex-col">
-        <div class="lg:w-4/6 mx-auto">
-        <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/Kx4LTjG/the.png">
-        </div>
-        <div class="flex flex-col sm:flex-row mt-10">
-            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-            <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
-                <img src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt="" srcset="">
+
+    <div class="mt_div"></div>
+    <div class="bg-deep-purple-accent-700">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+        <div class="flex flex-col mb-16 sm:text-center sm:mb-0">
+            <a class="mb-6 sm:mx-auto">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-accent-400">
+                <svg class="w-10 h-10 text-deep-purple-900" stroke="currentColor" viewBox="0 0 52 52">
+                <img src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt="">
+                </svg>
             </div>
-            <div class="flex flex-col items-center text-center justify-center">
-                <h2 class="font-medium title-font mt-4 text-white text-lg">Himanshu Soni</h2>
-                <div class="w-12 h-1 bg-black-500 rounded mt-2 mb-4"></div>
-                <p class="text-base text-gray-400">IITM-2023 | Python | Monday</p>
-            </div>
-            </div>
-            <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-            <p class="leading-relaxed text-lg mb-4">
-                The person who does not have a problem with Mondays.
-                Fascinated by learning- as great Joey Tribbiani said- Knowledge is a tricky thing.
-                I lick books, code and movies. I find it all Predestination, Inception and then Final Destination.
-                More of Pygamer than a Gamer and more of Django Explained than Django Unchained.
-                Can sit in a chair for more hours than you do. Please don't kill me though.
-                I believe in Myself just like you believe in The Magic Man in the sky.
-                Thank You. Come Again.</p>
+            </a>
+            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <h2 class="max-w-lg mb-6 text-3xl font- leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+                <span class="relative inline-block">
+                <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                    <defs>
+                    <pattern id="700c93bf-0068-4e32-aafe-ef5b6a647708" x="0" y="0" width=".135" height=".30">
+                        <circle cx="1" cy="1" r=".7"></circle>
+                    </pattern>
+                    </defs>
+                    <rect fill="url(#700c93bf-0068-4e32-aafe-ef5b6a647708)" width="52" height="24"></rect>
+                </svg>
+                <span class="relative">I</span>
+                </span>
+                love Mondays.
+            </h2>
+            <p class="text-base text-indigo-100 md:text-lg">Some quote goes over here. And some meme slang. And then I am hardworking and enthusiastic and all that shit.</p>
             </div>
         </div>
         </div>
     </div>
-    </section>
+    </div>
 
-    <section class="transparen text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-col">
-            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-                <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">This is beyond science.</h1>
-            </div>
-            </div>
-        <div class="container px-5 py-12 mx-auto">
 
-            <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
-            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
-                <img src="https://i.ibb.co/JQJbn4J/1623646179327-modified.png" alt="" srcset="">
-            </div>
-            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                <h2 class="text-white text-lg title-font font-medium mb-2">Edge Learning</h2>
-                <p class="leading-relaxed text-base">Euclidian Math and Mehcanics-Physics is like doing It. Just for pleasure. Not results. Mostly, I mean.</p>
-                <a class="mt-3 text-indigo-400 inline-flex items-center" href="https://www.linkedin.com/company/edge-learning-2021/">Visit</a>
-            </div>
-            </div>
-            <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
-            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
-                <img src="https://i.ibb.co/JnZ6QFt/youcir.png" alt="" srcset="">
-            </div>
-            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                <h2 class="text-white text-lg title-font font-medium mb-2">Youtube</h2>
-                <p class="leading-relaxed text-base">Like every other kid I learned Programming from one of the biggest institutes of the planet.</p>
-                <a class="mt-3 text-indigo-400 inline-flex items-center" href="https://www.youtube.com/">Visit</a>
-            </div>
-            </div>
-
-            <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
-                <img src="https://i.ibb.co/N2fq0XS/iitcir.png" alt="" srcset="">
-            </div>
-            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                <h2 class="text-white text-lg title-font font-medium mb-2">Indian Institute of Technology, Madras</h2>
-                <p class="leading-relaxed text-base">B.Sc. in Programming and Data Science, 2021-2023, makes learning the joy of life and makes me realize- you don't actually know it.</p>
-                <a class="mt-3 text-indigo-400 inline-flex items-center" href="https://onlinedegree.iitm.ac.in/">Visit</a>
-            </div>
-            </div>
-        </div>            
-    </section>
-    
-    <section class="transparen text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-col">
-                <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-                    <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">*INSERT MEME SUB HERE*</h1>
-                </div>
-            </div>
-            <div class="flex flex-wrap -m-4">
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-                <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://i.ibb.co/rkqg6fz/HIMANSHU-SONI.png">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-900 bg-gray-900 opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Socio Legal Forum</h2>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">Certificate of Appreciation</h1>
-                    <p class="leading-relaxed">Certification of Senior Web Devevloper Roles. <b><a href="https://i.ibb.co/rkqg6fz/HIMANSHU-SONI.png">See Credential</a></b></p>
-                </div>
-                </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-                <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://i.ibb.co/yFKKQHp/image.png">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-900 bg-gray-900 opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">HACKERRANK</h2>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">Python Certification</h1>
-                    <p class="leading-relaxed">Hackerrank Python Certification for Python Programmers. <b><a href="https://www.hackerrank.com/certificates/898b277261b1">See Credential</a></b></p>
-                </div>
-                </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-                <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://i.ibb.co/GvQLVjz/7c01e7d9bd76472493493cd208698694-0001.jpg">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-900 bg-gray-900 opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Ashish Online Service</h2>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">Certificate of Internship</h1>
-                    <p class="leading-relaxed">Certification of WebDev Internship. <b><a href="https://www.hackerrank.com/certificates/898b277261b1">See Credential</a></b></p>
-                </div>
-                </div>
-            </div>
-            <!--div class="lg:w-1/3 sm:w-1/2 p-4">
-                <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/603x363">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">The 400 Blows</h1>
-                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                </div>
-                </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-                <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/602x362">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">Neptune</h1>
-                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                </div>
-                </div>
-            </div>
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-                <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://dummyimage.com/605x365">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">THE SUBTITLE</h2>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">Holden Caulfield</h1>
-                    <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                </div>
-                </div>
-            </div-->
-            <div class="lg:w-1/3 sm:w-1/2 p-4">
-                <div class="flex relative">
-                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://i.ibb.co/vLTcRXc/image.png">
-                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-900 bg-gray-900 opacity-0 hover:opacity-100">
-                    <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">TESTDOME</h2>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">Python Certification</h1>
-                    <p class="leading-relaxed">Testdome Python Certification for Python Programmers. <b><a href="https://www.testdome.com/cert/91169b1f3a694eeb8507c110e2d891d6">See Credential</a></b></p>
-                </div>
-                </div>
-            </div>
-            </div>
+    <section class="transparen text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-6 mx-auto">
+          <div class="flex flex-wrap w-full mb-0 flex-col ">
+          <h1 class="behindtext">Mee.</h1>
+          </div>
         </div>
+    </section>
+    <div class="textgradi max-w-2xl mx-auto overflow-hidden rounded-lg shadow-md dark:bg-gray-800">
+    <img class="object-cover w-full h-64" src="https://i.ibb.co/Kx4LTjG/the.png" alt="honey">
+    <div class="p-6">
+        <div>
+            <span class="text-xs font-medium text-white uppercase dark:text-white">-'18May17, Honey deleting contacts because antisocial.</span>
+            <a class="block mt-2 text-2xl font- text-white transition-colors duration-200 transform dark:text-white hover:text-white">Knowledge is a tricky thing.- Joey Tribbiani</a>
+            <p class="mt-2 text-l font- text-white dark:text-white">The person who does not have a problem with Mondays. I lick books, code and movies. I find it all Predestination, Inception and then Final Destination. Can sit in a chair for a lot of hours. Please don't kill me though. I believe in Myself just like you believe in The Magic Man in the sky. Thank You. Come Again.</p>
+        </div>
+        <div class="mt-4">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <img class="object-cover h-10 rounded-full" src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt="honey">
+                    <a href="#" class="mx-2 font- text-white dark:text-white">Himanshu Soni</a>
+                </div>
+                <span class="mx-1 text-xs text-white dark:text-white">aka honey. another vocal oscillation i respond to.</span>
+            </div>
+        </div>  
+    </div>
+    </div>
+
+    <div class="mt_div"></div>
+
+    <section class="transparen text-gray-400 body-font bg-gray-900">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap w-full mb-0 flex-col ">
+        <h1 class="behindtext">Arrt.</h1>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+          </div>
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
+                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://thirdspacelearning.com/wp-content/uploads/2021/03/3d-shapes.jpg)"></div>
+                <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi">
+                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Today</h3>
+                    
+                </div>
+            </div>
+          </div>
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
+                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.pinimg.com/736x/76/61/1a/76611a5d440ebabb57b5a817ddb0bec7.jpg)"></div>
+                <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi">
+                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Tomorrow</h3>
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+          </div>
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
+                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://static.skillshare.com/uploads/discussion/tmp/34b2cdfe)"></div>
+                <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi">
+                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Yesterday</h3>
+                    
+                </div>
+            </div>
+          </div>
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
+                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://media.sketchfab.com/models/e5402392c1814cf4bd1801c5bdd10ef0/thumbnails/c8bba1f777e347249ce90a75cf2c3008/74f51d9b8fb44c699c1b254f8da61cf8.jpeg)"></div>
+                <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi">
+                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Day before it</h3>
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     
-    <section class="transparen text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col">
-        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">It ain't much, but its honest work.</h1>
+    <!-- <div class="mt_div"></div> -->
+
+    <!-- <section class="transparen text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-6 mx-auto">
+          <div class="flex flex-wrap w-full mb-0 flex-col ">
+          <h1 class="behindtext">Gam.</h1>
+          </div>
         </div>
-        </div>
-        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/McpV6hq/image.png">
-            </div>
-            <h2 class="text-xl font-medium title-font text-white mt-5">Intendo</h2>
-            <p class="text-base leading-relaxed mt-2">Intendo is a part of the django's behaviour and interaction to the real world. Not the prettiest but an awesome artwork for programmers in the real world that have been waiting for their next breath to make a change.</p>
-            <a class="text-indigo-400 inline-flex items-center mt-3" href="http://intendo.pythonanywhere.com/">Visit</a>
-        </div>
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/fGgh8g3/Screenshot-2021-01-15-1024.png">
-            </div>
-            <h2 class="text-xl font-medium title-font text-white mt-5">Spoti.py</h2>
-            <p class="text-base leading-relaxed mt-2">A Spotify Clone made completely in Python- using only TKinter and Pygame, along with a local database using MySQL. Immaculate enough to make you wonder if Spotify for PC is made in Python. No lol its not! XD</p>
-            <a class="text-indigo-400 inline-flex items-center mt-3">Visit</a>
-        </div>
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.ibb.co/wcrY97W/image.png">
-            </div>
-            <h2 class="text-xl font-medium title-font text-white mt-5">ThreeJS-D Earth</h2>
-            <p class="text-base leading-relaxed mt-2">A 3-D rendered image of a planet, which was named by us. We live on it. And since you realize I created it...you know what i mean. A minimal piece of art based on Javascript Libraries.</p>
-            <a class="text-indigo-400 inline-flex items-center mt-3" href="https://h1m4n3hu.github.io/three/planet">Visit</a>
-        </div>
-        </div>
-    </div>
     </section>
+    <div id="gameDiv" class="w-full max-w-sm  mx-auto transparen rounded-md shadow-md dark:bg-gray-800"></div> -->
+
+
+    <div class="mt_div"></div>
+
+    <section class="transparen text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-6 mx-auto">
+          <div class="flex flex-wrap w-full mb-0 flex-col ">
+          <h1 class="behindtext">Yet.</h1>
+          </div>
+        </div>
+    </section>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="flex items-center justify-center -mx-4 lg:pl-8">
+            <div class="flex flex-col items-end px-3">
+              <img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt=""   />
+              <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+            </div>
+            <div class="px-3">
+              <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt="" />
+            </div>
+          </div>
+    </div>
     
-    <section class="transparen text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col">
-        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">Now we will paint the bushes over here.</h1>
-        </div>
-    </div>
-    <div class="container px-5 py-12 mx-auto flex flex-wrap">
-        <div class="lg:w-2/3 mx-auto">
-        <div class="flex flex-wrap w-full bg-gray-800 py-32 px-10 relative mb-4">
-            <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://i.ibb.co/YZ1RVtB/image.png">
-            <div class="text-center relative z-10 w-full">
-            <h2 class="text-2xl text-white font-medium title-font mb-2">The Loremhoids</h2>
-            <p class="leading-relaxed">A gentle reminder for did you Lorem today?</p>
-            <a class="mt-3 text-indigo-300 inline-flex items-center" href="https://h1m4n3hu.github.io/three/lorem">Visit</a>
-            </div>
-        </div>
-        <div class="flex flex-wrap -mx-2">
-            <div class="px-2 w-1/2">
-            <div class="flex flex-wrap w-full bg-gray-800 sm:py-24 py-16 sm:px-10 px-6 relative">
-                <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://i.ibb.co/ZXBC3Gf/Screenshot-2021-01-19-155944.png">
-                <div class="text-center relative z-10 w-full">
-                <h2 class="text-xl text-white font-medium title-font mb-2">Evolet Rings</h2>
-                <p class="leading-relaxed">My very first portfolio website.</p>
-                <a class="mt-3 text-indigo-300 inline-flex items-center">Visit</a>
-                </div>
-            </div>
-            </div>
-            <div class="px-2 w-1/2">
-            <div class="flex flex-wrap w-full bg-gray-800 sm:py-24 py-16 sm:px-10 px-6 relative">
-                <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://i.ibb.co/jW4X4s2/image.png">
-                <div class="text-center relative z-10 w-full">
-                <h2 class="text-xl text-white font-medium title-font mb-2">Eunoia</h2>
-                <p class="leading-relaxed">Me paralaxa websit fr me faishan.</p>
-                <a class="mt-3 text-indigo-300 inline-flex items-center" href="https://h1m4n3hu.github.io/three/eunoia">Visit</a>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <div class="rounded-lg h-64 overflow-hidden" id="gameDiv">
-    </div>
-
-    <!--section class="transparen text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-
-        <div class="flex w-full mb-20 flex-wrap">
-        <h1 class="sm:text-2xl text-2xl font-medium title-font text-white lg:w-1/3 lg:mb-0 mb-4">Mom and Dod Productions, Pvt. Ltd.</h1>
-        </div>
-
-        <div class="flex flex-wrap md:-m-2 -m-1">
-        <div class="flex flex-wrap w-1/2">
-            <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
-            </div>
-            <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.ibb.co/T0JdDFC/IMG-20210911-1417334.jpg">
-            </div>
-            <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
-            </div>
-        </div>
-        <div class="flex flex-wrap w-1/2">
-            <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
-            </div>
-            <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
-            </div>
-            <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
-            </div>
-        </div>
-        </div>
-    </div>
-    </section-->
-
-
+    <div class="mt_div"></div>
+   
+    
     <script>
         var scene=new THREE.Scene();
         var cam=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
@@ -387,6 +273,10 @@ body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans 
         cubing(0.5,1,0,2,1,1);
         cubing(-0.5,-1,0,2,1,1); 
 
+        cubing(2,-3,0,2.75,1,1);
+        cubing(2,3,0,2.75,1,1);
+        cubing(-2,3,0,2.75,1,1);
+        cubing(-2,-3,0,2.75,1,1);
 
         function mouse_position(e){
             cam.position.set((660-e.clientX)/100,(e.clientY-330)/100,13);
@@ -424,6 +314,8 @@ body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans 
 
 
 
+
+
         //mini-game
         let app;
         let keys={};
@@ -431,7 +323,7 @@ body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans 
         var look=true;
         
         window.onload=function(){
-            app=new PIXI.Application({width:1500,height:450,transparent:true});
+            app=new PIXI.Application({width:365,height:200,transparent:true});
             document.querySelector("#gameDiv").appendChild(app.view);
 
             app.loader.add("plyr","meaf.png");
@@ -463,8 +355,8 @@ body{margin: 0;background-color: #000;font-family: 'Trebuchet MS', 'Lucida Sans 
         pl.anchor.set(0.5);
         pl.animationSpeed=0.25;
         pl.loop=false;
-        pl.x=200;
-        pl.y=215;
+        pl.x=60;
+        pl.y=160;
         app.stage.addChild(pl);
         }
 
