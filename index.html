@@ -12,10 +12,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
-        <title>h1m4n3hu | Shadi-party ke order liye jaate h.</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <title>h1m4n3hu | Portfolio</title>
 <style>
-@import url(https://fonts.googleapis.com/css?family=Righteous);
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /*my own*/
 body{margin: 0;background-color: #000;font-family: 'Josefin Sans', sans-serif !important;}
 .mt_div{width: 0px; height: 300px; background-color: #fff;}
@@ -27,7 +29,7 @@ body{margin: 0;background-color: #000;font-family: 'Josefin Sans', sans-serif !i
 .allet{position: absolute;top: 0;left: 0;width: 100%;height: 100vh;color: wheat;display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;transition: color 3s linear;}
 .named{font-family: 'Roboto Slab', serif;font-size: 3em;}
 .press{font-family: 'Sacramento', cursive;font-size: 3rem;}
-.filler{position: absolute; z-index: 30 ;top: 0;left: 0;width: 98vw;height: 100vh;background-color: rgb(0, 0, 0);transition: background-color 3s linear;}
+.filler{position: absolute; z-index: 30 ;top: 0;left: 0;width: 100vw;height: 100vh;background-color: rgb(0, 0, 0);transition: background-color 3s linear;}
 .transp{background-color: rgba(0, 0, 0, 0);}
 .transptxt{color: rgba(0, 0, 0, 0);}
 .contain{width: 100%;height: 95vh;display: flex;justify-content: center;align-items: center;}
@@ -43,20 +45,57 @@ body{margin: 0;background-color: #000;font-family: 'Josefin Sans', sans-serif !i
     100% { width: 100%; }
 }
 
-.behindtext{font-size: 10rem; transform: rotate(-90deg); position: absolute;font-family: Righteous;background: linear-gradient(to right, #f32170,#ff6b08, #cf23cf, #eedd44);-webkit-text-fill-color: transparent;-webkit-background-clip: text;}
+.behindtext{font-size: 10rem; position: absolute;font-family: Righteous;background: linear-gradient(to right, #f32170,#ff6b08, #cf23cf, #eedd44);-webkit-text-fill-color: transparent;-webkit-background-clip: text;-webkit-text-stroke: 4px blue;}
 @media only screen and (max-width: 600px) {
   .behindtext {display: none;}
 }
 .textgradi,.behindtext{
-background-image: linear-gradient(right, #111 11%, #333 56%);
-background-image: -o-linear-gradient(right, #111 11%, #333 56%);
-background-image: -moz-linear-gradient(right, #111 11%, #333 56%);
-background-image: -webkit-linear-gradient(right, #111 11%, #333 56%);
-background-image: -ms-linear-gradient(right, #111 11%, #333 56%);
-background-image: gradient(right, #111 11%, #333 56%);  
+background-image: linear-gradient(right, #111 20%, #444 56%);
+background-image: -o-linear-gradient(right, #111 20%, #444 56%);
+background-image: -moz-linear-gradient(right, #111 20%, #444 56%);
+background-image: -webkit-linear-gradient(right, #111 20%, #444 56%);
+background-image: -ms-linear-gradient(right, #111 20%, #444 56%);
+background-image: gradient(right, #111 20%, #444 56%);  
 }
 
-#gameDiv{border: solid #333 10px;}
+.section{
+  height: 35vh;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg1 {
+  background-color: #ccc;
+}
+.bg2 {
+  background-color: #333;
+}
+h1 {
+  line-height: 1.2;
+  margin: 0;
+}
+.revealUp {
+  opacity: 0;
+  visibility: hidden;
+}
+.spacer {
+  height: 50vh;
+}
+
+.namestay{
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 5em !important;
+}
+.xtratex{
+    opacity: 0;
+}
+
+
 
 </style>
     </head>
@@ -66,8 +105,10 @@ background-image: gradient(right, #111 11%, #333 56%);
     <div id="mainer"></div>
 
     <div class="filler">
-    <div class="allet">                                                       
-        <div class="named">h1m4n3hu</div>
+    <div class="allet"> 
+        <div class="section namestay" style="height: 18vh;">
+            <h1 style="color: white; position: fixed; top: 45%;">h1m4n3hu</h1>
+        </div>
         <div class="progress">
             <div class="progress-value"></div>
         </div>
@@ -111,43 +152,20 @@ background-image: gradient(right, #111 11%, #333 56%);
     </div>
     </div>
 
-
-    <section class="transparen text-gray-400 body-font bg-gray-900">
-        <div class="container px-5 py-6 mx-auto">
-          <div class="flex flex-wrap w-full mb-0 flex-col ">
-          <h1 class="behindtext">Mee.</h1>
-          </div>
-        </div>
-    </section>
-    <div class="textgradi max-w-2xl mx-auto overflow-hidden rounded-lg shadow-md dark:bg-gray-800">
-    <img class="object-cover w-full h-64" src="https://i.ibb.co/Kx4LTjG/the.png" alt="honey">
-    <div class="p-6">
-        <div>
-            <span class="text-xs font-medium text-white uppercase dark:text-white">-'18May17, Honey deleting contacts because antisocial.</span>
-            <a class="block mt-2 text-2xl font- text-white transition-colors duration-200 transform dark:text-white hover:text-white">Knowledge is a tricky thing.- Joey Tribbiani</a>
-            <p class="mt-2 text-l font- text-white dark:text-white">The person who does not have a problem with Mondays. I lick books, code and movies. I find it all Predestination, Inception and then Final Destination. Can sit in a chair for a lot of hours. Please don't kill me though. I believe in Myself just like you believe in The Magic Man in the sky. Thank You. Come Again.</p>
-        </div>
-        <div class="mt-4">
-            <div class="flex items-center">
-                <div class="flex items-center">
-                    <img class="object-cover h-10 rounded-full" src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt="honey">
-                    <a href="#" class="mx-2 font- text-white dark:text-white">Himanshu Soni</a>
-                </div>
-                <span class="mx-1 text-xs text-white dark:text-white">aka honey. another vocal oscillation i respond to.</span>
-            </div>
-        </div>  
-    </div>
-    </div>
-
-    <div class="mt_div"></div>
-
     <section class="transparen text-gray-400 body-font bg-gray-900">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap w-full mb-0 flex-col ">
+        <!-- <div class="flex flex-wrap w-full mb-0 flex-col ">
         <h1 class="behindtext">Arrt.</h1>
-        </div>
+        </div> -->
         <div class="flex flex-wrap -m-4">
           <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
+                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://thirdspacelearning.com/wp-content/uploads/2021/03/3d-shapes.jpg)"></div>
+                <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi">
+                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Today</h3>
+                    
+                </div>
+            </div>
           </div>
           <div class="xl:w-1/3 md:w-1/2 p-4">
             <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
@@ -170,6 +188,13 @@ background-image: gradient(right, #111 11%, #333 56%);
         </div>
         <div class="flex flex-wrap -m-4">
           <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
+                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://thirdspacelearning.com/wp-content/uploads/2021/03/3d-shapes.jpg)"></div>
+                <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi">
+                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Today</h3>
+                    
+                </div>
+            </div>
           </div>
           <div class="xl:w-1/3 md:w-1/2 p-4">
             <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
@@ -195,25 +220,25 @@ background-image: gradient(right, #111 11%, #333 56%);
     
     <!-- <div class="mt_div"></div> -->
 
-    <!-- <section class="transparen text-gray-400 body-font bg-gray-900">
+    <!-- <!-- <section class="transparen text-gray-400 body-font bg-gray-900">
         <div class="container px-5 py-6 mx-auto">
           <div class="flex flex-wrap w-full mb-0 flex-col ">
           <h1 class="behindtext">Gam.</h1>
           </div>
         </div>
-    </section>
-    <div id="gameDiv" class="w-full max-w-sm  mx-auto transparen rounded-md shadow-md dark:bg-gray-800"></div> -->
+    </section> -->
+    <!-- <div id="gameDiv" class="w-full max-w-sm  mx-auto transparen rounded-md shadow-md dark:bg-gray-800"></div> -->
 
 
     <div class="mt_div"></div>
 
-    <section class="transparen text-gray-400 body-font bg-gray-900">
+    <!-- <section class="transparen text-gray-400 body-font bg-gray-900">
         <div class="container px-5 py-6 mx-auto">
           <div class="flex flex-wrap w-full mb-0 flex-col ">
           <h1 class="behindtext">Yet.</h1>
           </div>
         </div>
-    </section>
+    </section> -->
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="flex items-center justify-center -mx-4 lg:pl-8">
             <div class="flex flex-col items-end px-3">
@@ -227,7 +252,60 @@ background-image: gradient(right, #111 11%, #333 56%);
     </div>
     
     <div class="mt_div"></div>
-   
+
+    
+    <div class="section namestay">
+        <h1 style="color: white; position: fixed; top: 45%;">h1m4n3hu</h1>
+    </div>
+    <div class="section namestay">
+        <h1 style="color: white;" class="revealUp">@<span class="xtratex">h1m4n3hu@</h1>
+    </div>
+    <div class="section namestay">
+        <h1 style="color: white;" class="revealUp"><span class="xtratex">.github.ioh1m4n3hu</span>.github.io</h1>
+    </div>
+    <div class="section namestay">
+        <h1 style="color: white;" class="revealUp">github.com/<span class="xtratex">h1m4n3hugithub.com/</span></h1>
+    </div>
+    <div class="section namestay">
+        <h1 style="color: white;" class="revealUp"><span class="xtratex">.medium.comh1m4n3hu</span>.medium.com</h1>
+    </div>
+    <div class="spacer"></div>
+
+
+
+    
+    <!-- <section class="transparen text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-6 mx-auto">
+          <div class="flex flex-wrap w-full mb-0 flex-col ">
+          <h1 class="behindtext">Mee.</h1>
+          </div>
+        </div>
+    </section> -->
+    <div class="textgradi max-w-2xl mx-auto overflow-hidden rounded-lg shadow-md dark:bg-gray-800">
+        <img class="object-cover w-full h-64" src="https://i.ibb.co/Kx4LTjG/the.png" alt="honey">
+        <div class="p-6">
+            <div>
+                <span class="text-xs font-medium text-white uppercase dark:text-white">-'18May17, Honey deleting contacts because antisocial.</span>
+                <a class="block mt-2 text-2xl font- text-white transition-colors duration-200 transform dark:text-white hover:text-white">Knowledge is a tricky thing.- Joey Tribbiani</a>
+                <p class="mt-2 text-l font- text-white dark:text-white">The person who does not have a problem with Mondays. I lick books, code and movies. I find it all Predestination, Inception and then Final Destination. Can sit in a chair for a lot of hours. Please don't kill me though. I believe in Myself just like you believe in The Magic Man in the sky. Thank You. Come Again.</p>
+            </div>
+            <div class="mt-4">
+                <div class="flex items-center">
+                    <div class="flex items-center">
+                        <img class="object-cover h-10 rounded-full" src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt="honey">
+                        <a href="#" class="mx-2 font- text-white dark:text-white">Himanshu Soni</a>
+                    </div>
+                    <span class="mx-1 text-xs text-white dark:text-white">aka honey. another vocal oscillation i respond to.</span>
+                </div>
+            </div>  
+        </div>
+        </div>
+    
+        <div class="mt_div"></div>
+    
+    
+    
+    <div class="spacer"></div>
     
     <script>
         var scene=new THREE.Scene();
@@ -300,6 +378,7 @@ background-image: gradient(right, #111 11%, #333 56%);
         controls=new THREE.OrbitControls(cam,renderer.domElement);
 
 
+
         setTimeout(function(){
             $('.filler').addClass('transp');
             $('.allet').addClass('transptxt');
@@ -315,89 +394,25 @@ background-image: gradient(right, #111 11%, #333 56%);
 
 
 
+        gsap.registerPlugin(ScrollTrigger);
+        // REVEAL //
+        gsap.utils.toArray(".revealUp").forEach(function (elem) {
+        ScrollTrigger.create({
+            trigger: elem,
+            start: "top 60%",
+            end: "bottom 40%",
+            markers: false,
+            onEnter: function () {gsap.fromTo(elem,{ y: 100, autoAlpha: 0 },{duration: 1.25,y: 0,autoAlpha: 1,ease: "back",overwrite: "auto"});},
+            onLeave: function () {gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });},
+            onEnterBack: function () {gsap.fromTo(elem,{ y: -100, autoAlpha: 0 },{duration: 1.25,y: 0,autoAlpha: 1,ease: "back",overwrite: "auto"});},
+            onLeaveBack: function () {gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });}
+        });
+        });
 
 
-        //mini-game
-        let app;
-        let keys={};
-        let script={};
-        var look=true;
-        
-        window.onload=function(){
-            app=new PIXI.Application({width:365,height:200,transparent:true});
-            document.querySelector("#gameDiv").appendChild(app.view);
 
-            app.loader.add("plyr","meaf.png");
-            app.loader.load(doneLoading);
 
-            window.addEventListener("keydown",keysdown);
-            window.addEventListener("keyup",keysup);
-        }
 
-        function playerSheet(){
-        let sheet=new PIXI.BaseTexture.from(app.loader.resources["plyr"].url);
-        let w=48;
-        let h=96;
-        script["standing"]=[new PIXI.Texture(sheet,new PIXI.Rectangle(w,2*h,w,h))];
-        script["walkright"]=[
-            new PIXI.Texture(sheet,new PIXI.Rectangle(0*w,2*h,w,h)),
-            new PIXI.Texture(sheet,new PIXI.Rectangle(1*w,2*h,w,h)),
-            new PIXI.Texture(sheet,new PIXI.Rectangle(2*w,2*h,w,h)),
-        ];
-        script["walkleft"]=[
-            new PIXI.Texture(sheet,new PIXI.Rectangle(0*w,h,w,h)),
-            new PIXI.Texture(sheet,new PIXI.Rectangle(2*w,h,w,h)),
-            new PIXI.Texture(sheet,new PIXI.Rectangle(1*w,h,w,h)),
-        ];
-        }
-
-        function thePlayer(){
-        pl=new PIXI.AnimatedSprite(script.standing);
-        pl.anchor.set(0.5);
-        pl.animationSpeed=0.25;
-        pl.loop=false;
-        pl.x=60;
-        pl.y=160;
-        app.stage.addChild(pl);
-        }
-
-        function doneLoading(e){
-        playerSheet();
-        thePlayer();
-        app.ticker.add(gameloop);
-        }
-
-        function keysdown(e){
-        keys[e.keyCode]=true;
-        }
-        function keysup(e){
-            keys[e.keyCode]=false;
-        }
-        function gameloop(){
-            if (keys["37"]){
-            look=false;
-            if (!pl.playing){
-                pl.textures=script.walkleft;
-                pl.play();
-            }
-            pl.x-=3;
-            if (pl.x<-20){
-                pl.x=1400;
-            }
-            }
-
-            else if (keys["39"]){
-            look=true;
-            if (!pl.playing){
-                pl.textures=script.walkright;
-                pl.play();
-            }
-            pl.x+=3;
-            if (pl.x>1400){
-                pl.x=-20
-            }
-            }
-        }
 
 
     </script>
