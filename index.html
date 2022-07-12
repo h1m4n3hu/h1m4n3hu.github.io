@@ -1,388 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta http-equiv="content-type" content="text/html; charset-UTF-8"/><meta name="theme-color" content="#000"><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js" integrity="sha512-Q+IG0h7As6sfqE2t1Xf5IeamNyCXb4EXxGCA9Mlbpv7xtwurVHNdVDbyWeSQ3ulPf2FRlqeu77Ec3SJDdIR63w==" crossorigin="anonymous"></script><link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="OrbitControls.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"><script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script><title>h1m4n3hu | i ♡ mondays</title>
-
-<style>
-@import url('https://fonts.googleapis.com/css?family=Righteous');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-/*my own*/
-body{margin: 0;background-color: #000;font-family: 'Josefin Sans', sans-serif !important;}
-.mt_div{width: 0px; height: 300px; background-color: #fff;}
-#mainer{position: fixed;top: 0;left: 0;z-index: -10;overflow: hidden;} /* change sticky to fixed */
-.transparen{background-color: rgba(100,100,100,0);}
-::selection {color: black;background: rgba(255,255,255,0.5);}
-::-webkit-scrollbar {width: 0;  /* Remove scrollbar space */background: transparent;  /* Optional: just make scrollbar invisible */}
-/*boot*/
-.allet{position: absolute;top: 0;left: 0;width: 100%;height: 100vh;color: wheat;display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;transition: color 3s linear;}
-.named{font-family: 'Roboto Slab', serif;font-size: 3em;}
-.press{font-family: 'Sacramento', cursive;font-size: 3rem;}
-.filler{position: absolute; z-index: 30 ;top: 0;left: 0;width: 100vw;height: 100vh;background-color: rgb(0, 0, 0);transition: background-color 3s linear;}
-.transp{background-color: rgba(0, 0, 0, 0);}
-.transptxt{color: rgba(0, 0, 0, 0);}
-.contain{width: 100%;height: 95vh;display: flex;justify-content: center;align-items: center;}
-.hidbox{display:inline-block;overflow:hidden;color: white;}
-.otwo{font-size: 5rem;font-family: 'Raleway', sans-serif;position: relative;bottom: -6rem;transition: bottom 0.4s linear;}
-/*progress*/
-.progress {background: rgba(255,255,255,0.1);justify-content: flex-start;border-radius: 100px;align-items: center;position: relative;padding: 5px 5px;display: flex;height: 3px;width: 500px;transition: background-color 3s linear;}
-.progress-value {animation: load 4s normal forwards;box-shadow: 0 10px 40px -10px wheat;border-radius: 100px;background: wheat;height: 2px;width: 0;transition: background-color 3s linear;}
-.progress-vanish{background: rgba(0,0,0,0);}
-@keyframes load {0% { width: 0; }75% { width: 60%; }100% { width: 100%; }}
-
-.behindtext{font-size: 10rem; position: absolute;font-family: Righteous;background: linear-gradient(to right, #f32170,#ff6b08, #cf23cf, #eedd44);-webkit-text-fill-color: transparent;-webkit-background-clip: text;-webkit-text-stroke: 4px blue;}
-@media only screen and (max-width: 600px) {.behindtext {display: none;}}
-.textgradi,.behindtext{background-color: #000;}
-.section{height: 35vh;width: 100%;position: relative;padding: 0;text-align: center;overflow: hidden;display: flex;justify-content: center;align-items: center;}
-.bg1 {background-color: #ccc;}
-.bg2 {background-color: #333;}
-h1 {line-height: 1.2;margin: 0;}
-.revealUp {opacity: 0;visibility: hidden;}
-.spacer {height: 50vh;}
-.namestay{font-family: 'Josefin Sans', sans-serif !important;font-size: 5em !important;}
-.xtratex{opacity: 0;}
-#onlyopaq{opacity: 0;}
-</style>
-
-    </head>
+<meta http-equiv="content-type" content="text/html; charset-UTF-8"/><meta name="theme-color" content="#000"><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js" integrity="sha512-Q+IG0h7As6sfqE2t1Xf5IeamNyCXb4EXxGCA9Mlbpv7xtwurVHNdVDbyWeSQ3ulPf2FRlqeu77Ec3SJDdIR63w==" crossorigin="anonymous"></script><link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="OrbitControls.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"><script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script><title>h1m4n3hu | i love mondays</title>
+<style>@import url('https://fonts.googleapis.com/css?family=Righteous');@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');/*my own*/body{margin: 0;background-color: #000;font-family: 'Josefin Sans', sans-serif !important;}.mt_div{width: 0px; height: 300px; background-color: #fff;}#mainer{position: fixed;top: 0;left: 0;z-index: -10;overflow: hidden;} /* change sticky to fixed */.transparen{background-color: rgba(100,100,100,0);}::selection {color: black;background: rgba(255,255,255,0.5);}::-webkit-scrollbar {width: 0;  /* Remove scrollbar space */background: transparent;  /* Optional: just make scrollbar invisible */}/*boot*/.allet{position: absolute;top: 0;left: 0;width: 100%;height: 100vh;color: wheat;display: flex;flex-direction: column;justify-content: center;align-items: center;user-select: none;transition: color 3s linear;}.named{font-family: 'Roboto Slab', serif;font-size: 3em;}.press{font-family: 'Sacramento', cursive;font-size: 3rem;}.filler{position: absolute; z-index: 30 ;top: 0;left: 0;width: 100vw;height: 100vh;background-color: rgb(0, 0, 0);transition: background-color 3s linear;}.transp{background-color: rgba(0, 0, 0, 0);}.transptxt{color: rgba(0, 0, 0, 0);}.contain{width: 100%;height: 95vh;display: flex;justify-content: center;align-items: center;}.hidbox{display:inline-block;overflow:hidden;color: white;}.otwo{font-size: 5rem;font-family: 'Raleway', sans-serif;position: relative;bottom: -6rem;transition: bottom 0.4s linear;}/*progress*/.progress {background: rgba(255,255,255,0.1);justify-content: flex-start;border-radius: 100px;align-items: center;position: relative;padding: 5px 5px;display: flex;height: 3px;width: 500px;transition: background-color 3s linear;}.progress-value {animation: load 4s normal forwards;box-shadow: 0 10px 40px -10px wheat;border-radius: 100px;background: wheat;height: 2px;width: 0;transition: background-color 3s linear;}.progress-vanish{background: rgba(0,0,0,0);}@keyframes load {0% { width: 0; }75% { width: 60%; }100% { width: 100%; }}.behindtext{font-size: 10rem; position: absolute;font-family: Righteous;background: linear-gradient(to right, #f32170,#ff6b08, #cf23cf, #eedd44);-webkit-text-fill-color: transparent;-webkit-background-clip: text;-webkit-text-stroke: 4px blue;}.textgradi,.behindtext{background-color: #000;}.section{height: 35vh;width: 100%;position: relative;padding: 0;text-align: center;overflow: hidden;display: flex;justify-content: center;align-items: center;}.bg1 {background-color: #ccc;}.bg2 {background-color: #333;}h1 {line-height: 1.2;margin: 0;}.revealUp {opacity: 0;visibility: hidden;}.spacer {height: 50vh;}.namestay{font-family: 'Josefin Sans', sans-serif !important;font-size: 5em !important;}.xtratex{opacity: 0;}#onlyopaq{opacity: 0;}@media only screen and (max-width: 600px){body{overflow-x: hidden !important;}.behindtext {display: none;}.transparen{margin-left: 60px;}.namestay{font-size: 1.5em !important;}}</style>
+</head>
 
 <body onmousemove="mouse_position(event)">
 
-    <div id="mainer"></div>
-
-    <div class="filler">
-    <div class="allet"> 
-        <div class="section namestay" style="height: 18vh;">
-            <!-- <h1 class="uppername" style="color: orange; position: fixed; top: 45%;">h1m4n3hu</h1> -->
-        </div>
-        <div class="progress">
-            <div class="progress-value"></div>
-        </div>
+<div id="mainer"></div>
+<div class="filler"><div class="allet"> <div class="section namestay" style="height: 18vh;"></div><div class="progress"><div class="progress-value"></div></div></div></div>
+<div class="mt_div"></div><div class="bg-deep-purple-accent-700"><div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"><div class="max-w-xl sm:mx-auto lg:max-w-2xl"><div class="flex flex-col mb-16 sm:text-center sm:mb-0"><a class="mb-6 sm:mx-auto"><div class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-accent-400"><svg class="w-10 h-10 text-deep-purple-900" stroke="currentColor" viewBox="0 0 52 52"><img src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt=""></svg></div></a><div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"><h2 class="max-w-lg mb-6 text-3xl font- leading-none tracking-tight text-white sm:text-4xl md:mx-auto">I love Mondays.</h2><p class="text-base text-indigo-100 md:text-lg">Some quote goes over here. And some meme slang. And then I am hardworking and enthusiastic and all that shit.</p></div></div></div></div></div>
+<section class="transparen text-gray-400 body-font bg-gray-900"><div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+        <div class="xl:w-1/3 md:w-1/2 p-4"><div class="flex flex-col items-center justify-center max-w-sm mx-auto"><div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/LppWK2n/image.png)"></div><div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi"><h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://github.com/h1m4n3hu/strucktures/blob/master/playlist.py">Linked Playlist</a></h3></div></div></div>
+        <div class="xl:w-1/3 md:w-1/2 p-4"><div class="flex flex-col items-center justify-center max-w-sm mx-auto"><div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/bs4JyLZ/MIT-Face-Representation-Press.png)"></div><div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi"><h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://github.com/h1m4n3hu/open-see-weed">Doggy Style</a></h3></div></div></div>
+        <div class="xl:w-1/3 md:w-1/2 p-4"><div class="flex flex-col items-center justify-center max-w-sm mx-auto"><div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/Wc3YGPZ/Screenshot-2021-08-16-071203.png)"></div><div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi"><h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://h1m4n3hu.github.io/three/planet">Plan-B</a></h3></div></div></div>
     </div>
-    </div>
-
-   
-
-
-    <div class="mt_div"></div>
-    <div class="bg-deep-purple-accent-700">
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-        <div class="flex flex-col mb-16 sm:text-center sm:mb-0">
-            <a class="mb-6 sm:mx-auto">
-            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-teal-accent-400">
-                <svg class="w-10 h-10 text-deep-purple-900" stroke="currentColor" viewBox="0 0 52 52">
-                <img src="https://i.ibb.co/2cChfSC/circle-cropped.png" alt="">
-                </svg>
-            </div>
-            </a>
-            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <h2 class="max-w-lg mb-6 text-3xl font- leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
-                <!-- <span class="relative inline-block">
-                <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                    <defs>
-                    <pattern id="700c93bf-0068-4e32-aafe-ef5b6a647708" x="0" y="0" width=".135" height=".30">
-                        <circle cx="1" cy="1" r=".7"></circle>
-                    </pattern>
-                    </defs>
-                    <rect fill="url(#700c93bf-0068-4e32-aafe-ef5b6a647708)" width="52" height="24"></rect>
-                </svg>
-                <span class="relative">I</span>
-                </span> -->
-                 I love Mondays.
-            </h2>
-            <p class="text-base text-indigo-100 md:text-lg">Some quote goes over here. And some meme slang. And then I am hardworking and enthusiastic and all that shit.</p>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <section class="transparen text-gray-400 body-font bg-gray-900">
-      <div class="container px-5 py-24 mx-auto">
-        <!-- <div class="flex flex-wrap w-full mb-0 flex-col ">
-        <h1 class="behindtext">Arrt.</h1>
-        </div> -->
-        <div class="flex flex-wrap -m-4">
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
-                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/LppWK2n/image.png)"></div>
-                <!-- <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi"> -->
-                <div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi">
-                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://github.com/h1m4n3hu/strucktures/blob/master/playlist.py">Linked Playlist</a></h3>
-                    
-                </div>
-            </div>
-          </div>
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
-                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/bs4JyLZ/MIT-Face-Representation-Press.png)"></div>
-                <!-- <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi"> -->
-                <div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi">
-                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://github.com/h1m4n3hu/open-see-weed">Doggy Style</a></h3>
-                    
-                </div>
-            </div>
-          </div>
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
-                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/Wc3YGPZ/Screenshot-2021-08-16-071203.png)"></div>
-                <!-- <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi"> -->
-                <div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi">
-                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://h1m4n3hu.github.io/three/planet">Plan-B</a></h3>
-                    
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-wrap -m-4">
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
-                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/McpV6hq/image.png)"></div>
-                <!-- <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi"> -->
-                <div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi">
-                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="http://intendo.pythonanywhere.com/">Intendo</a></h3>
-                    
-                </div>
-            </div>
-          </div>
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
-                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/fGgh8g3/Screenshot-2021-01-15-1024.png)"></div>
-                <!-- <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi"> -->
-                <div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi">
-                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Spoti.py</h3>
-                    
-                </div>
-            </div>
-          </div>
-          <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div class="flex flex-col items-center justify-center max-w-sm mx-auto">
-                <div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://xiaomiui.net/wp-content/uploads/2022/06/Best-Ad-Blocker-Apps-for-Android-1.jpg)"></div>
-                <!-- <div class="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800 textgradi"> -->
-                <div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi">
-                    <h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://github.com/h1m4n3hu/abdlocker">Abdlocker</a></h3>
-                    
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="flex flex-wrap -m-4">
+        <div class="xl:w-1/3 md:w-1/2 p-4"><div class="flex flex-col items-center justify-center max-w-sm mx-auto"><div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/McpV6hq/image.png)"></div><div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi"><h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="http://intendo.pythonanywhere.com/">Intendo</a></h3></div></div></div>
+        <div class="xl:w-1/3 md:w-1/2 p-4"><div class="flex flex-col items-center justify-center max-w-sm mx-auto"><div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://i.ibb.co/fGgh8g3/Screenshot-2021-01-15-1024.png)"></div><div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi"><h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white">Spoti.py</h3></div></div></div>
+        <div class="xl:w-1/3 md:w-1/2 p-4"><div class="flex flex-col items-center justify-center max-w-sm mx-auto"><div class="w-full h-64 bg- bg-center bg-cover rounded-lg shadow-md" style="background-image: url(https://xiaomiui.net/wp-content/uploads/2022/06/Best-Ad-Blocker-Apps-for-Android-1.jpg)"></div><div class="w-56 -mt-10 overflow-hidden bg-white shadow-lg md:w-full dark:bg-gray-800 textgradi"><h3 class="py-2 font- tracking-wide text-center text-white uppercase dark:text-white"><a href="https://github.com/h1m4n3hu/abdlocker">Abdlocker</a></h3></div></div></div>
+    </div></div>
+</section>
+<div class="mt_div"></div>
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"><div class="flex items-center justify-center -mx-4 lg:pl-8"><div class="flex flex-col items-end px-3"><a href=""><img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""/></a><a href=""><img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/6985265/pexels-photo-6985265.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/></a></div><div class="px-3"><a href=""><img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" alt=""/></a></div></div></div>
+<div class="mt_div"></div>
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
+<a href="/" aria-label="View Item"><div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"><img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://cutewallpaper.org/22/aesthetic-pop-art-women-wallpapers/android-wallpaper-user-aesthetic-magik-%F0%9F%91%91-board-pop-art-pop-art--comic-art-illustration-mypin-pop-art-comic-pop-art-wallpaper-pop-art.jpg" alt="" /><div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"><p class="mb-4 text-lg font-bold text-gray-100">Mona Lisa</p><p class="text-sm tracking-wide text-gray-300">Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions since the day it was made: Who’s the subject and why is she smiling?</p></div></div></a>
+<a href="/" aria-label="View Item"><div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"><img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://media.illustrationx.com/images/artist/FabioLyra/118827/crop/500/last-days-cover.jpg" alt="" /><div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"><p class="mb-4 text-lg font-bold text-gray-100">The Starry Night</p><p class="text-sm tracking-wide text-gray-300">Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in Saint-Rémy, where he’d committed himself in 1889.</p></div></div></a>
+<a href="/" aria-label="View Item"><div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"><img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://i.pinimg.com/originals/b2/4c/39/b24c39fbe2a0d6e33c19873dec424292.jpg" alt="" /><div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"><p class="mb-4 text-lg font-bold text-gray-100">The Kiss</p><p class="text-sm tracking-wide text-gray-300">Opulently gilded and extravagantly patterned, The Kiss, Gustav Klimt’s fin-de-siècle portrayal of intimacy, is a mix of Symbolism and Vienna Jugendstil, the Austrian variant of Art Nouveau.</p></div></div></a>
+<a href="/" aria-label="View Item"><div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"><img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZaAnNEYByCrwDWaB0SN2Ok2CMUGK-uRSPQQ&usqp=CAU" alt="" /><div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"><p class="mb-4 text-lg font-bold text-gray-100">The Harvesters</p><p class="text-sm tracking-wide text-gray-300">Bruegel’s fanfare for the common man is considered one of the defining works of Western art. This composition was one of six created on the theme of the seasons.</p></div></div></a>
+</div>
+</div>    
+<div class="mt_div"></div>
+<div class="section namestay" id="onlyopaq"><h1 style="color: white; position: fixed; top: 45%;">h1m4n3hu</h1></div>
+<div class="section namestay"><h1 style="color: white;" class="revealUp">@<span class="xtratex">h1m4n3hu@</h1></div>
+<div class="section namestay"><h1 style="color: white;" class="revealUp"><span class="xtratex">.github.ioh1m4n3hu</span>.github.io</h1></div>
+<div class="section namestay"><h1 style="color: white;" class="revealUp">github.com/<span class="xtratex">h1m4n3hugithub.com/</span></h1></div>
+<div class="section namestay"><h1 style="color: white;" class="revealUp"><span class="xtratex">.medium.comh1m4n3hu</span>.medium.com</h1></div>
+<div class="section namestay"><h1 style="color: white;" class="revealUp">linkedin.com/<span class="xtratex">h1m4n3hulinkedin.com/</span></h1></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
     
-    <!-- <div class="mt_div"></div> -->
+<script>
+    var scene=new THREE.Scene();var cam=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);cam.lookAt(0,0,0);cam.position.set(0,0,13);var renderer=new THREE.WebGLRenderer({antialias:true});renderer.setClearColor("rgb(0,0,0)");renderer.setSize(window.innerWidth,window.innerHeight);document.getElementById("mainer").appendChild(renderer.domElement);
+    var light1=new THREE.PointLight(0xffffff,1,1000);light1.position.set(10,0,20);scene.add(light1);var light2=new THREE.PointLight(0xff0000,1,1000);light2.position.set(-10,0,10);scene.add(light2);var light3=new THREE.PointLight(0x00ff00,1,1000);light3.position.set(0,10,10);scene.add(light3);var light4=new THREE.PointLight(0x0000ff,1,1000);light4.position.set(0,10,0);scene.add(light4);
+    var spherer=new THREE.SphereGeometry(10,1,1);var spheret=new THREE.MeshPhongMaterial({wireframe:true});var sphere=new THREE.Mesh(spherer,spheret);sphere.position.set(0,0,0);scene.add(sphere);
+    var cubing=(xx,yy,zz,lx,ly,lz)=>{var cuber=new THREE.BoxGeometry(lx,ly,lz);var cubet=new THREE.MeshPhongMaterial({color:0x333333});var cube=new THREE.Mesh(cuber,cubet);cube.position.set(xx,yy,zz);scene.add(cube);}
+    cubing(-2,0,0,1,6,1);cubing(2,0,0,1,6,1);cubing(0.5,1,0,2,1,1);cubing(-0.5,-1,0,2,1,1); cubing(2,-3,0,2.75,1,1);cubing(2,3,0,2.75,1,1);cubing(-2,3,0,2.75,1,1);cubing(-2,-3,0,2.75,1,1);
+    function mouse_position(e){cam.position.set((660-e.clientX)/100,(e.clientY-330)/100,13);}
+    render=()=>{var time=Date.now()*0.0005;requestAnimationFrame(render);light1.position.set(Math.sin(time*0.7)*30,Math.cos(time*0.5)*40,Math.sin(time*0.3)*50);light2.position.set(Math.sin(time*0.7)*30,Math.cos(time*0.5)*40,Math.cos(time*0.3)*50);light3.position.set(Math.cos(time*0.7)*30,Math.cos(time*0.5)*40,Math.sin(time*0.3)*50);light4.position.set(Math.cos(time*0.7)*30,Math.sin(time*0.5)*40,Math.cos(time*0.3)*50);sphere.rotation.set(Math.cos(time*0.02)*10,Math.sin(time*0.03)*15,Math.cos(time*0.01)*20);cam.lookAt(0,0,0);renderer.render(scene,cam);}
+    render();
+    controls=new THREE.OrbitControls(cam,renderer.domElement);
 
-    <!-- <!-- <section class="transparen text-gray-400 body-font bg-gray-900">
-        <div class="container px-5 py-6 mx-auto">
-          <div class="flex flex-wrap w-full mb-0 flex-col ">
-          <h1 class="behindtext">Gam.</h1>
-          </div>
-        </div>
-    </section> -->
-    <!-- <div id="gameDiv" class="w-full max-w-sm  mx-auto transparen rounded-md shadow-md dark:bg-gray-800"></div> -->
+    setTimeout(function(){$('.filler').addClass('transp');$('.allet').addClass('transptxt'); $('.uppername').addClass('transptxt'); $('.progress').addClass('progress-vanish');$('.progress-value').addClass('progress-vanish');}, 5000);
+    setTimeout(function(){$('.filler').css({"width":"0","heigth":"0"});$('.allet').css({"font-size":"0px",});$('.progress').css({"width":"0","heigth":"0"});$('.progress-value').css({"width":"0","heigth":"0"});}, 10000);
 
+    $(window).scroll(function() {var homeTop = $(window).scrollTop();
+    $("#onlyopaq").each(function() {var height = $(this).height();var opacity = -(height - homeTop + 2900) / height;$(this).css("opacity", opacity);});
+    });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".revealUp").forEach(function (elem) {ScrollTrigger.create({trigger: elem,start: "top 60%",end: "bottom 40%",markers: false,onEnter: function () {gsap.fromTo(elem,{ y: 100, autoAlpha: 0 },{duration: 1.25,y: 0,autoAlpha: 1,ease: "back",overwrite: "auto"});},onLeave: function () {gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });},onEnterBack: function () {gsap.fromTo(elem,{ y: -100, autoAlpha: 0 },{duration: 1.25,y: 0,autoAlpha: 1,ease: "back",overwrite: "auto"});},onLeaveBack: function () {gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });}});});
+</script>
 
-    <div class="mt_div"></div>
-
-    <!-- <section class="transparen text-gray-400 body-font bg-gray-900">
-        <div class="container px-5 py-6 mx-auto">
-          <div class="flex flex-wrap w-full mb-0 flex-col ">
-          <h1 class="behindtext">Yet.</h1>
-          </div>
-        </div>
-    </section> -->
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="flex items-center justify-center -mx-4 lg:pl-8">
-            <div class="flex flex-col items-end px-3">
-              <img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56" src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""   />
-              <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/6985265/pexels-photo-6985265.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-            </div>
-            <div class="px-3">
-              <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" alt="" />
-            </div>
-          </div>
-    </div>
-    
-    <div class="mt_div"></div>
-    
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-            <a href="/" aria-label="View Item">
-            <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-                <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://cutewallpaper.org/22/aesthetic-pop-art-women-wallpapers/android-wallpaper-user-aesthetic-magik-%F0%9F%91%91-board-pop-art-pop-art--comic-art-illustration-mypin-pop-art-comic-pop-art-wallpaper-pop-art.jpg" alt="" />
-                <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p class="mb-4 text-lg font-bold text-gray-100">Mona Lisa</p>
-                <p class="text-sm tracking-wide text-gray-300">
-                    Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions since the day it was made: Who’s the subject and why is she smiling?
-                </p>
-                </div>
-            </div>
-            </a>
-            <a href="/" aria-label="View Item">
-            <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-                <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://media.illustrationx.com/images/artist/FabioLyra/118827/crop/500/last-days-cover.jpg" alt="" />
-                <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p class="mb-4 text-lg font-bold text-gray-100">The Starry Night</p>
-                <p class="text-sm tracking-wide text-gray-300">
-                    Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in Saint-Rémy, where he’d committed himself in 1889.
-                </p>
-                </div>
-            </div>
-            </a>
-            <a href="/" aria-label="View Item">
-            <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-                <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://i.pinimg.com/originals/b2/4c/39/b24c39fbe2a0d6e33c19873dec424292.jpg" alt="" />
-                <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p class="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
-                <p class="text-sm tracking-wide text-gray-300">
-                    Opulently gilded and extravagantly patterned, The Kiss, Gustav Klimt’s fin-de-siècle portrayal of intimacy, is a mix of Symbolism and Vienna Jugendstil, the Austrian variant of Art Nouveau.
-                </p>
-                </div>
-            </div>
-            </a>
-            <a href="/" aria-label="View Item">
-            <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-                <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZaAnNEYByCrwDWaB0SN2Ok2CMUGK-uRSPQQ&usqp=CAU" alt="" />
-                <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p class="mb-4 text-lg font-bold text-gray-100">The Harvesters</p>
-                <p class="text-sm tracking-wide text-gray-300">
-                    Bruegel’s fanfare for the common man is considered one of the defining works of Western art. This composition was one of six created on the theme of the seasons.
-                </p>
-                </div>
-            </div>
-            </a>
-        </div>
-    </div>
-    
-    <div class="mt_div"></div>
-    
-    <div class="section namestay" id="onlyopaq"><h1 style="color: white; position: fixed; top: 45%;">h1m4n3hu</h1></div>
-    <div class="section namestay"><h1 style="color: white;" class="revealUp">@<span class="xtratex">h1m4n3hu@</h1></div>
-    <div class="section namestay"><h1 style="color: white;" class="revealUp"><span class="xtratex">.github.ioh1m4n3hu</span>.github.io</h1></div>
-    <div class="section namestay"><h1 style="color: white;" class="revealUp">github.com/<span class="xtratex">h1m4n3hugithub.com/</span></h1></div>
-    <div class="section namestay"><h1 style="color: white;" class="revealUp"><span class="xtratex">.medium.comh1m4n3hu</span>.medium.com</h1></div>
-    <div class="section namestay"><h1 style="color: white;" class="revealUp">linkedin.com/<span class="xtratex">h1m4n3hulinkedin.com/</span></h1></div>
-    <div class="spacer"></div>
-    
-    <div class="spacer"></div>
-    
-    <script>
-        var scene=new THREE.Scene();
-        var cam=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
-        cam.lookAt(0,0,0)
-        cam.position.set(0,0,13);
-        var renderer=new THREE.WebGLRenderer({antialias:true});
-        renderer.setClearColor("rgb(0,0,0)");
-        renderer.setSize(window.innerWidth,window.innerHeight);
-        document.getElementById("mainer").appendChild(renderer.domElement);
-
-        var light1=new THREE.PointLight(0xffffff,1,1000);
-        light1.position.set(10,0,20);
-        scene.add(light1);
-        var light2=new THREE.PointLight(0xff0000,1,1000);
-        light2.position.set(-10,0,10);
-        scene.add(light2);
-        var light3=new THREE.PointLight(0x00ff00,1,1000);
-        light3.position.set(0,10,10);
-        scene.add(light3);
-        var light4=new THREE.PointLight(0x0000ff,1,1000);
-        light4.position.set(0,10,0);
-        scene.add(light4);
-
-        /*var sphere=new THREE.Mesh(new THREE.SphereGeometry(0.5,100,100),new THREE.MeshBasicMaterial({wireframe:false,color:0xffffff}));
-        sphere.position.set(10,0,20)
-        scene.add(sphere);*/
-
-        var spherer=new THREE.SphereGeometry(10,1,1);
-        var spheret=new THREE.MeshPhongMaterial({wireframe:true});
-        var sphere=new THREE.Mesh(spherer,spheret);
-        sphere.position.set(0,0,0)
-        scene.add(sphere);
-
-        var cubing=(xx,yy,zz,lx,ly,lz)=>{
-            var cuber=new THREE.BoxGeometry(lx,ly,lz);
-            var cubet=new THREE.MeshPhongMaterial({color:0x333333});
-            var cube=new THREE.Mesh(cuber,cubet);
-            cube.position.set(xx,yy,zz)
-            scene.add(cube);
-        }
-        cubing(-2,0,0,1,6,1);
-        cubing(2,0,0,1,6,1);
-        cubing(0.5,1,0,2,1,1);
-        cubing(-0.5,-1,0,2,1,1); 
-
-        cubing(2,-3,0,2.75,1,1);
-        cubing(2,3,0,2.75,1,1);
-        cubing(-2,3,0,2.75,1,1);
-        cubing(-2,-3,0,2.75,1,1);
-
-        function mouse_position(e){
-            cam.position.set((660-e.clientX)/100,(e.clientY-330)/100,13);
-        }
-
-        render=()=>{
-            var time=Date.now()*0.0005;
-            requestAnimationFrame(render);
-            light1.position.set(Math.sin(time*0.7)*30,Math.cos(time*0.5)*40,Math.sin(time*0.3)*50);
-            light2.position.set(Math.sin(time*0.7)*30,Math.cos(time*0.5)*40,Math.cos(time*0.3)*50);
-            light3.position.set(Math.cos(time*0.7)*30,Math.cos(time*0.5)*40,Math.sin(time*0.3)*50);
-            light4.position.set(Math.cos(time*0.7)*30,Math.sin(time*0.5)*40,Math.cos(time*0.3)*50);
-            sphere.rotation.set(Math.cos(time*0.02)*10,Math.sin(time*0.03)*15,Math.cos(time*0.01)*20);
-            // cam.position.set(Math.cos(time*0.14)*15,Math.sin(time*0.25)*15,Math.cos(time*0.15)*15);
-            cam.lookAt(0,0,0)
-            renderer.render(scene,cam);
-        }
-        render();        
-        controls=new THREE.OrbitControls(cam,renderer.domElement);
-
-        setTimeout(function(){
-            $('.filler').addClass('transp');
-            $('.allet').addClass('transptxt'); 
-            $('.uppername').addClass('transptxt'); 
-            $('.progress').addClass('progress-vanish');
-            $('.progress-value').addClass('progress-vanish');
-        }, 5000);
-        setTimeout(function(){
-            $('.filler').css({"width":"0","heigth":"0"});
-            $('.allet').css({"font-size":"0px",});
-            $('.progress').css({"width":"0","heigth":"0"});
-            $('.progress-value').css({"width":"0","heigth":"0"});
-        }, 10000);
-
-
-        $(window).scroll(function() {
-        var homeTop = $(window).scrollTop();
-
-        $("#onlyopaq").each(function() {
-            var height = $(this).height();
-            var opacity = -(height - homeTop + 2900) / height;
-            console.log(opacity);
-            $(this).css("opacity", opacity);
-        });
-        });
-
-
-        gsap.registerPlugin(ScrollTrigger);
-        // REVEAL //
-        gsap.utils.toArray(".revealUp").forEach(function (elem) {
-        ScrollTrigger.create({
-            trigger: elem,
-            start: "top 60%",
-            end: "bottom 40%",
-            markers: false,
-            onEnter: function () {gsap.fromTo(elem,{ y: 100, autoAlpha: 0 },{duration: 1.25,y: 0,autoAlpha: 1,ease: "back",overwrite: "auto"});},
-            onLeave: function () {gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });},
-            onEnterBack: function () {gsap.fromTo(elem,{ y: -100, autoAlpha: 0 },{duration: 1.25,y: 0,autoAlpha: 1,ease: "back",overwrite: "auto"});},
-            onLeaveBack: function () {gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });}
-        });
-        });
-
-
-
-
-
-
-
-    </script>
 </body>
 </html>
